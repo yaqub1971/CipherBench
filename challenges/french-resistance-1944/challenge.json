@@ -27,7 +27,15 @@
       "The number 455 is the length of the message as transmitted, not counting the indicator groups. Without the prefix, 450 letters of ciphertext remain.",
       "If the cipher is a double transposition, the two keywords were probably between 15 and 35 letters long. The message may contain a few null letters at the beginning or the end.",
       "Operators often put the date of writing into the message. The plaintext may therefore contain 'mon vingt du cinq onze quarante quatre', somewhere in the middle."
-    ]
+    ],
+    "reader_remark": {
+      "remark": "Paolo Bonavoglia calls the message clearly a double transposition, very similar to the cipher of Antonio Marzi, an Italian partisan who also worked for the British secret service. Marzi's messages were solved by Armin Krauss, with the help of notes on the key that Marzi wrote down in 2007. Leo Marks's book 'Between Silk and Cyanide' describes these systems.",
+      "passed_on_by": "Klaus Schmeh, in a comment of 15 July 2026 under his post",
+      "links": [
+        "http://www1.crittologia.eu/storia/critMarzi.html",
+        "http://www1.crittologia.eu/critto/php/critMarzi.phtml"
+      ]
+    }
   },
   "transcription": {
     "made_from": "https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png",

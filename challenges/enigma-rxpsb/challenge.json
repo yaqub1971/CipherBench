@@ -31,7 +31,7 @@
       "The copy here follows the published transcription. The facsimile was compared for layout and count, not letter by letter."
     ]
   },
-  "context": "Radio traffic of German Army Group North during the invasion of the Soviet Union (Operation Barbarossa).",
+  "context": "Radio traffic of German Army Group North during the invasion of the Soviet Union (Operation Barbarossa). The message was received by the radio station of the quartermaster (Ib) of the SS-Totenkopf Division. The collection holds close to 1,000 Enigma and hand-cipher messages, nearly all now broken.",
   "published_hints": [
     {
       "hint": "The key of the day before, 27 June 1941, is known: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. Message Nr. 51 on the same radio link, received on 28 June at 09:07, was still enciphered with it.",
@@ -48,6 +48,22 @@
     {
       "hint": "Message MVUEH of 10 July 1941, from the same collection, was broken in September 2026. Its transcription had contained several errors, the left-hand wheel turned over inside the message, and its key was completely different from the key of the other messages of that day.",
       "source": "https://cryptocellar.org/bgac/the-mvueh-break.html"
+    },
+    {
+      "hint": "Plaintexts in this collection have no spaces and use X as a separator. Ä and Ü are written AE and UE, and CH and CK are replaced by Q. Names are often sent twice. One broken message ends X HARTJENSTEIN X HARTJENSTEIN X.",
+      "source": "https://cryptocellar.org/bgac/the-fmngi-break.html"
+    },
+    {
+      "hint": "Signatures have served as cribs. Messages to the same station from the division's supply service end with forms such as XGEZXHARTJENSTEINX. RXPSB came from a different sender, an army corps.",
+      "source": "https://cryptocellar.org/bgac/the-fmngi-break.html"
+    },
+    {
+      "hint": "Incoming messages in this collection often contain wrong letters, from poor radio conditions and from handwriting that is hard to read. Two messages broken in September 2026 had 9 wrong letters in 49 and 11 in 69, and hill-climbing searches had failed to converge on them.",
+      "source": "https://cryptocellar.org/bgac/the-awtzk-znlzt-breaks.html"
+    },
+    {
+      "hint": "Solvers have looked for cribs in the plaintexts of hand-cipher messages of the same day, which the project shared on request.",
+      "source": "https://cryptocellar.org/bgac/the-awtzk-znlzt-breaks.html"
     }
   ],
   "full_solution": "The Enigma settings (wheel order, ring settings, plugboard connections and start position), the complete German plaintext, and the places where letters are missing.",
@@ -70,6 +86,10 @@
     {
       "what": "RXPSB: recovered keys, June to October 1941",
       "url": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html"
+    },
+    {
+      "what": "RXPSB: full list of the 1941 messages, with the row 114 / 109 for this one",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list.html"
     }
   ]
 }

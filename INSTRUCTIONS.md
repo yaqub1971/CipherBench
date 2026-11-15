@@ -53,6 +53,12 @@ OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZX
   - "The Berlin Clock in K4 is the World Clock in Berlin that was the gathering place for the crowds that brought down the Berlin wall."
   - "The codes of Kryptos from the morse code at the beginning through K5 are about delivering a message." K5 is a further passage that he has announced and not yet released.
   - Writing about a future owner who might not keep K4 secret: "If they don't, then (CLUE) what's the point?"
+- **Other remarks on record:**
+  - In 2006 the artist said that the answers to the first three passages contain clues to the fourth.
+  - In 2014, when he gave the word CLOCK, he said: "You'd better delve into that particular clock."
+  - In November 2025 he said that K5 has 97 characters like K4, uses a similar system, and shares some words with K4 in the same positions, BERLINCLOCK among them.
+  - Asked in November 2025 about the mathematics of the solution, he answered: "Who says it is even a math solution?" He advised solvers to be creative.
+  - Edward Scheidt, who designed the cipher systems of the sculpture, has spoken of an intentional "change in the methodology".
 - **Background:** the plaintext was found among the artist's archived papers in 2025. It has not been published, and how the cipher works is still unknown.
 - **Full solution:** the complete 97-letter plaintext, with the cipher and key that produce it.
 
@@ -122,6 +128,9 @@ TREZSUBHBEHDEGLHCLUELRLFSITIERETRGRSDNNIIGOURETEEERBDRLGLRLZ
 LNTSNRNERNCPSDBOUEEEEISMINHEHHFEHMICIINAHOFONM
 ```
 
+- **Published by the authors:** the three challenges were built with the weaknesses in mind that had been used to solve the first challenge of this kind, which was set in 2007 and solved in 2013. Of part 3, co-author Klaus Schmeh wrote in 2018 that the plaintext was written by the authors themselves and not taken from any published source.
+- **How the first challenge was solved:** George Lasry used two methods, a hill-climbing attack on the ciphertext alone and a dictionary attack on keys made from phrases. Both are described in the journal Cryptologia (Lasry, Kopal and Wacker, 2014). Its plaintext could also be found by searching published texts for one with the same letters.
+- **Reported by George Lasry in 2018:** his hill-climbing method could not produce a solution for keys as long as these. For part 1 he tested tens of billions of phrases from Wikipedia and Project Gutenberg as the second key and did not find it. He judged parts 2 and 3 out of reach, because their keys are random and long, and part 1 possibly solvable.
 - **Full solution:** both keys and the complete plaintext of all three parts. One or two parts do not count.
 
 ### 3. Grüß's mental-arithmetic cipher
@@ -179,7 +188,8 @@ TELUT IEUUA JFGEU
   - The number 455 is the length of the message as transmitted, not counting the indicator groups. Without the prefix, 450 letters of ciphertext remain.
   - If the cipher is a double transposition, the two keywords were probably between 15 and 35 letters long. The message may contain a few null letters at the beginning or the end.
   - Operators often put the date of writing into the message. The plaintext may therefore contain "mon vingt du cinq onze quarante quatre", somewhere in the middle.
-- **Transcription:** read from the [photograph of the sheet](https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png). Group 38 is read as BAANO, and its last letter could also be a Q. In group 76 the writer corrected the first letter to J.
+- **A reader's remark, passed on by Klaus Schmeh:** Paolo Bonavoglia calls the message clearly a double transposition, very similar to the cipher of Antonio Marzi, an Italian partisan who also worked for the British secret service. Marzi's messages were solved by Armin Krauss, with the help of notes on the key that Marzi wrote down in 2007. Leo Marks's book "Between Silk and Cyanide" describes these systems.
+- **Transcription:** read from the [photograph of the sheet](https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png). It differs from the transcript printed with the photograph in one group: number 36 is CMENE on the sheet, not CMEME. Group 38 is read as BAANO, and its last letter could also be a Q. In group 76 the writer corrected the first letter to J.
 - **Full solution:** the keys and the complete plaintext of the message.
 
 ### 5. Enigma message RXPSB, 1941
@@ -199,11 +209,15 @@ MXXYM UNU-T ED
 - **First group:** RXPSB is not enciphered text. It told the receiver which key was in use.
 - **Header on the message form:** `(1020) - 114 - ZDN QMF`. The message was enciphered at 10:20 and is announced as 114 letters long, the first group included. ZDN QMF is the indicator: with the day's settings, the receiver set the wheels to ZDN and deciphered QMF to get the start position for the text.
 - **Transcription:** by Frode Weierud's project, from the [original message form](https://cryptocellar.org/bgac/spruch/28061941-053-in.pdf). A hyphen marks a letter the receiving operator did not get. The form holds 112 letters and marks where 114 are announced, so two more letters appear to be missing.
-- **Where it comes from:** radio traffic of German Army Group North during the invasion of the Soviet Union. An army corps ("A.K.") sent the message to a quartermaster's radio station ("Ib"), which received it at 11:26.
+- **Where it comes from:** radio traffic of German Army Group North during the invasion of the Soviet Union. An army corps ("A.K.") sent the message to the radio station of the quartermaster ("Ib") of the SS-Totenkopf Division, which received it at 11:26. The collection it belongs to holds close to 1,000 Enigma and hand-cipher messages, and nearly all of them are now broken.
 - **Published hints:** from Frode Weierud's site.
   - The key of the day before, 27 June 1941, is known: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. A message on the same radio link, received on 28 June at 09:07, was still enciphered with it. That key does not open RXPSB as transcribed.
   - The project names the likely reasons why messages like this one did not break: unfavourable plaintext, problematic plugboard connections and short length.
   - A message of 10 July 1941 from the same collection was broken in September 2026. Its transcription had contained several errors, the left-hand wheel turned over inside the message, and its key was completely different from the key of the other messages of that day.
+  - Plaintexts in this collection have no spaces and use X as a separator. Ä and Ü are written AE and UE, and CH and CK are replaced by Q. Names are often sent twice. One broken message ends X HARTJENSTEIN X HARTJENSTEIN X.
+  - Signatures have served as cribs. Messages to the same station from the division's supply service end with forms such as XGEZXHARTJENSTEINX. RXPSB came from a different sender, an army corps.
+  - Incoming messages in this collection often contain wrong letters, from poor radio conditions and from handwriting that is hard to read. Two messages broken in September 2026 had 9 wrong letters in 49 and 11 in 69, and hill-climbing searches had failed to converge on them.
+  - Solvers have looked for cribs in the plaintexts of hand-cipher messages of the same day, which the project shared on request.
 - **Full solution:** the Enigma settings and the complete German plaintext. The settings are the wheel order, the ring settings, the plugboard connections and the start position. Say where the missing letters fall.
 - **Standard machine only:** a solution must work on the standard Army Enigma described above. A machine with invented wiring does not count.
 
@@ -224,6 +238,9 @@ TBRS XSWX GGTY TVKQ NGSC HVGF
   - The form is marked "M-Thetis", and the indicator points to the key net Thetis. The boat's radio operator tried the key net Potsdam first and got gibberish.
   - Deciphered with the day's bigram table, the indicator groups read EACH SEDM. At the end of the message the first group is written VAOL, and read that way they give KACH OEDM.
   - Other messages from U-534 dated 1 May 1945 are broken. They are in the key net Potsdam, and their settings are published on the same site.
+  - The Potsdam key of 1 May 1945: reflector B, fourth wheel Gamma, wheels IV III VIII, ring settings VCCH, plugs CH EJ NV OU TY LG SZ PK DI QB. With this key and the start position PUYY, the first six letters of the message come out as IPZAYK, the gibberish the operator got.
+  - A second key from the boat's messages, used for Dönitz's message announcing his appointment as Hitler's successor: reflector C, fourth wheel Beta, wheels V VI VIII, ring settings EPEL, plugs AE BF CM DQ HU JN LX PR SZ VW.
+  - In the key book the indicator groups give the numbers 14 and 9, or 14 and 5 for the other reading. These numbers pointed to the basic setting in a table that has not survived.
   - The Enigma@Home computing project is trying to decrypt this message.
 - **Full solution:** the Enigma settings and the complete German plaintext. The settings are the wheel order including the fourth wheel, the reflector, the ring settings, the plugboard connections and the start position.
 - **Standard machine only:** a solution must work on the standard M4. A machine with invented wiring does not count.
