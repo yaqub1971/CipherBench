@@ -20,7 +20,7 @@
   "full_solution": "The ten-letter German word together with the method that turns the 31 digits into it.",
   "verification": {
     "type": "answer holder",
-    "how": "The author fixed the solution in advance by publishing a SHA-256 hash of his solution statement, and confirms a correct answer. The local check screens a submission (ten letters, a method description) and tries the word against the published hash; the author's confirmation is final.",
+    "how": "The author fixed the solution in advance by publishing a SHA-256 hash of his solution statement, and confirms a correct answer.",
     "where": "https://klausschmeh.net/can-you-solve-this-puzzle-from-a-world-class-mental-calculator-and-win-100-euros/"
   },
   "notes": [

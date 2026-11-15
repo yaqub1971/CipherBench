@@ -48,7 +48,7 @@ The first public challenge of this kind was set in 2007 and solved in 2013. Arno
 | 3 | 1,006 | German | 27–34 columns each, random |
 
 - **Full solution:** both keys and the complete plaintext of all three parts.
-- **Check:** the two keys are applied to the ciphertext and must produce the submitted plaintext exactly. MysteryTwister's own solution check gives independent confirmation.
+- **Check:** the two keys are applied to the ciphertext and must produce the submitted plaintext exactly. The answer counts once MysteryTwister's solution check accepts it.
 
 ### 3. Grüß's mental-arithmetic cipher
 
@@ -72,7 +72,7 @@ A handwritten sheet of 93 five-letter groups, found with a clandestine radio set
 - **What is known:** the first and last groups are identical. The mix of letters matches French, which means the letters were rearranged, not replaced. A double column transposition is the usual guess for this kind of radio traffic.
 - **Transcription:** made for this benchmark from the photograph of the sheet. The notes are in the [challenge file](challenges/french-resistance-1944/challenge.json).
 - **Full solution:** the keys and the complete plaintext of the message.
-- **Check:** the keys are applied to the ciphertext and must produce the submitted plaintext exactly, and the plaintext must read as French.
+- **Check:** the keys are applied to the ciphertext and must produce the submitted plaintext exactly. The answer counts once the plaintext is confirmed to be the French message.
 
 ### 5. Urquhart's Cyphral Distich
 
@@ -84,42 +84,29 @@ Sir Thomas Urquhart, a Scottish writer, printed two poems as rows of numbers.
 Under the numbers Urquhart printed a promise that a skilful reader will find in them "his own heart's wishes, and the Author's minde".
 
 - **Full solution:** a named printed text and a fixed rule that turn all 64 numbers into letters, plus the 64-letter plaintext.
-- **Check:** the rule is applied to the named text and must produce the submitted plaintext for every number. The named text must be a real printing that Urquhart could have used.
+- **Check:** the rule is applied to the named text and must produce the submitted plaintext for every number. The answer counts once the named text is confirmed as a real printing that Urquhart could have used, and the plaintext as a readable line.
 
 ## Why these five
 
-Each challenge has a way to confirm a correct answer that does not depend on anyone's opinion:
+Each challenge was selected because a correct answer can be verified and checked:
 
 - **Someone holds the answer.** For Kryptos K4 and the Grüß cipher, a hash of the answer was stored in advance. A submitted answer either matches or it does not.
 - **The method is fixed.** For the transposition challenges, the French message and the Urquhart poem, a claimed key is simply run again. It either produces a readable message or it does not.
 
-## Keeping false answers out
+## How answers are graded
 
-An AI system can write fluent text for any ciphertext and present it as a decryption. The checker is built so that such an answer fails.
+The AI system is asked to write a report explaining how it solved each puzzle. A proposed solution is then confirmed in two ways:
 
-1. **The key is submitted, not just the text.** The checker runs the key on the stored ciphertext and requires the result to match the submitted plaintext letter for letter.
-2. **The key must be small next to the text.** A key with as much free choice as the message has letters can turn any ciphertext into any message. With a small key, a readable result cannot be an accident. The checker requires the text to outweigh the key by at least 3 to 1.
-3. **Nothing is repaired by hand.** The output is taken as it comes. There are no skipped letters and no corrections.
-4. **The result must read as language, and only the right key may do so.** The plaintext is scored against letter statistics for the expected language. A key that is nearly right, with a few columns out of place, is rejected because a neighbouring key reads better.
+1. **On the challenge's website.** Two of the five challenges have a website that checks solutions. For these, the proposed solution is checked there:
+   - **Kryptos K4:** the owner's [online verifier](https://paradigm.xyz/kryptos/k4).
+   - **Double Column Transposition Reloaded, parts 1–3:** the solution check on [MysteryTwister](https://mysterytwister.org/challenges/level-3/).
 
-Key size against text size, for the challenges that are checked by re-running the key:
-
-| Challenge | Text | Largest key | Text outweighs key |
-|---|---|---|---|
-| Transposition, part 1 | 613 letters | two keys of 27 columns | 10 to 1 |
-| Transposition, part 2 | 637 letters | two keys of 27 columns | 11 to 1 |
-| Transposition, part 3 | 1,006 letters | two keys of 34 columns | 13 to 1 |
-| French Resistance message | 450 letters or more | two keys of 35 columns | 5 to 1 |
-| Urquhart, as a rule on a named text | 64 numbers | nothing left to choose | accepted |
-| Urquhart, as a table giving each number a letter | 64 numbers | 32 freely chosen letters | 1.4 to 1, not accepted |
-
-Both sides are measured in bits. A key of *n* columns holds log2(*n*!) bits of free choice, and ordinary text carries about 3.2 bits of regularity per letter.
-
-The Urquhart rows show why the rule matters. The poem uses 32 different numbers in 64 places. A table that gives each number a letter can be made to say many different things, so no such reading could be shown to be the right one. A rule that reads the numbers against a printed book leaves nothing to adjust.
+   The Grüß cipher, the French Resistance message and Urquhart's Cyphral Distich have no such website.
+2. **By a human.** A human reads the report and confirms that the proposed solution is correct.
 
 ## Scoring
 
-Each challenge is worth 20%. A challenge counts only when it is solved in full and the solution has passed its check.
+Each challenge is worth 20%. A challenge counts only when it is solved in full and the solution has been confirmed.
 
 | Challenges solved | Score |
 |---|---|
@@ -130,58 +117,7 @@ Each challenge is worth 20%. A challenge counts only when it is solved in full a
 | 4 | 80% |
 | 5 | 100% |
 
-Partial solutions are not accepted. One of the three transposition ciphertexts, most of a message, or a plaintext without its key all score nothing.
-
-Three challenges need a confirmation from outside the checker before they count:
-
-| Challenge | What the checker does | What still has to happen |
-|---|---|---|
-| Kryptos K4 | Confirms 97 letters that fit the four published fragments | The owner's verifier accepts the text |
-| Grüß's cipher | Confirms a ten-letter word with a method, and tries it against the published hash | The author confirms the answer |
-| Urquhart's Cyphral Distich | Re-runs the rule and tests the result | The named text is confirmed as a real printing |
-
-Until then the checker reports the answer as awaiting confirmation, and it does not count.
-
-## Running the checker
-
-It needs Python 3.9 or later and nothing else.
-
-```bash
-python -m cypherbench list
-```
-
-```bash
-python -m cypherbench score submissions/TEMPLATE.json
-```
-
-Once an answer holder has confirmed an answer, name that challenge with `--confirmed`:
-
-```bash
-python -m cypherbench score my-answers.json --confirmed kryptos-k4,gruess-cipher
-```
-
-Answers go in one JSON file. [`submissions/TEMPLATE.json`](submissions/TEMPLATE.json) shows the format.
-
-- **Column keys** are given in the order they were used to encipher. A key is either a keyword or a list of numbers giving each column's rank, so `"ZEBRAS"` and `[6, 3, 2, 4, 1, 5]` are the same key.
-- **The French message** also needs the run of groups that forms the message, for example `"groups": [3, 92]`.
-- **The Urquhart poem** needs the source text as a plain-text file, with its pages or sections separated by lines that start with `===`, and one of the rules listed in [`cypherbench/bookindex.py`](cypherbench/bookindex.py).
-
-The tests include the 2007 transposition challenge with its published keys, as a real case with a known answer:
-
-```bash
-python -m unittest discover -s tests
-```
-
-## What is in the repository
-
-| Path | Contents |
-|---|---|
-| `challenges/` | The five ciphertexts, each with a file describing its origin, what is known, and how it is checked |
-| `cypherbench/` | The checker and the scorer |
-| `cypherbench/data/` | Letter statistics for English, German, French and Latin |
-| `submissions/` | The answer template |
-| `tests/` | Tests for the checker |
-| `tools/` | The script that built the letter statistics from public-domain books |
+Partial solutions are not accepted. One of the three transposition ciphertexts, or most of a message, scores nothing.
 
 ## Sources and credit
 
@@ -193,4 +129,3 @@ The challenges belong to their creators. They are reproduced here, with their so
 - **French Resistance message:** sheet shown by Didier Clarençon, published by [Klaus Schmeh](https://klausschmeh.net/an-encrypted-message-from-the-french-resistance-can-you-decipher-it/).
 - **Urquhart's Cyphral Distich:** text from the [1834 edition of Urquhart's works](https://archive.org/details/worksofsirthomas00mait), page 417. The account of the longer poem follows [Cyphersolver](https://cyphersolver.com/urquhart.html).
 - **Background:** Klaus Schmeh's [list of the top 50 unsolved encrypted messages](https://scienceblogs.de/klausis-krypto-kolumne/the-top-50-unsolved-encrypted-messages/) and his [current site](https://klausschmeh.net/).
-- **Letter statistics:** built from public-domain books on Project Gutenberg.

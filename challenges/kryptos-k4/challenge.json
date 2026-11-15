@@ -49,7 +49,7 @@
   "full_solution": "The complete 97-letter plaintext.",
   "verification": {
     "type": "answer holder",
-    "how": "The owner of the artist's solution runs an online verifier that compares a submitted plaintext with a stored hash of the artist's text. The local check only screens a submission (97 letters, consistent with the four published fragments); the verifier's answer is final.",
+    "how": "The owner of the artist's solution runs an online verifier that compares a submitted plaintext with a stored hash of the artist's text.",
     "where": "https://paradigm.xyz/kryptos/k4"
   },
   "notes": [
