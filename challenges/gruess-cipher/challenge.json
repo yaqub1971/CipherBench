@@ -1,0 +1,37 @@
+{
+  "id": "gruess-cipher",
+  "order": 3,
+  "title": "Grüß's mental-arithmetic cipher",
+  "origin": "Cipher designed by the mental calculator Wenzel Grüß, published by Klaus Schmeh on 16 October 2026",
+  "language": [
+    "de"
+  ],
+  "size": "31 digits in two lines, hiding one German word of exactly ten letters",
+  "ciphertext": [
+    "ciphertext.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "commitment": {
+    "algorithm": "SHA-256",
+    "of": "the author's solution statement",
+    "hash": "24b23351ddf2b11651dd971b7b42e23d41fb1feebe9e9baf1cdc2692b67c3478"
+  },
+  "full_solution": "The ten-letter German word together with the method that turns the 31 digits into it.",
+  "verification": {
+    "type": "answer holder",
+    "how": "The author fixed the solution in advance by publishing a SHA-256 hash of his solution statement, and confirms a correct answer. The local check screens a submission (ten letters, a method description) and tries the word against the published hash; the author's confirmation is final.",
+    "where": "https://klausschmeh.net/can-you-solve-this-puzzle-from-a-world-class-mental-calculator-and-win-100-euros/"
+  },
+  "notes": [
+    "The method can be carried out entirely in the head, for enciphering and deciphering.",
+    "The author offers 100 euros to the first person who sends the word and a comprehensible description of how it was found.",
+    "A word that is only guessed or matched against the hash, without the method, is not a solution."
+  ],
+  "sources": [
+    {
+      "what": "Challenge post",
+      "url": "https://klausschmeh.net/can-you-solve-this-puzzle-from-a-world-class-mental-calculator-and-win-100-euros/"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "transposition-reloaded",
+  "order": 2,
+  "title": "Double Column Transposition Reloaded, parts 1-3",
+  "origin": "Challenge by Arno Wacker, Bernhard Esslinger and Klaus Schmeh, published on MysteryTwister in December 2013",
+  "language": [
+    "en",
+    "de"
+  ],
+  "size": "three ciphertexts of 613, 637 and 1,006 letters",
+  "ciphertext": [
+    "part1.txt",
+    "part2.txt",
+    "part3.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "parts": {
+    "part1": {
+      "letters": 613,
+      "language": "en",
+      "published_facts": "English plaintext. Both keys have 20-27 letters, with co-prime lengths, and were derived from English sentences.",
+      "solution_prefix": 34
+    },
+    "part2": {
+      "letters": 637,
+      "language": "en",
+      "published_facts": "Two English texts interleaved word by word. Both keys have 20-27 letters, with co-prime lengths, and were chosen at random.",
+      "solution_prefix": 37
+    },
+    "part3": {
+      "letters": 1006,
+      "language": "de",
+      "published_facts": "German plaintext. Both keys have 27-34 letters, with co-prime lengths, and were chosen at random.",
+      "solution_prefix": 48
+    }
+  },
+  "full_solution": "The two keys and the complete plaintext of all three parts.",
+  "verification": {
+    "type": "re-run",
+    "how": "For each part the two submitted keys are applied to the ciphertext and must produce the submitted plaintext exactly; the plaintext must read as the stated language, and no neighbouring key may read better. MysteryTwister's own solution check (the first 34, 37 and 48 letters of the three plaintexts) gives independent confirmation.",
+    "where": "https://mysterytwister.org/challenges/level-3/"
+  },
+  "notes": [
+    "MysteryTwister listed 0 solves for each part on 2026-11-15."
+  ],
+  "sources": [
+    {
+      "what": "Challenge list with ciphertext files and descriptions",
+      "url": "https://mysterytwister.org/challenges/level-3/"
+    },
+    {
+      "what": "Klaus Schmeh, Top 50 no. 13",
+      "url": "https://scienceblogs.de/klausis-krypto-kolumne/2018/01/25/the-top-50-unsolved-encrypted-messages-13-double-column-transposition-reloaded/"
+    }
+  ]
+}

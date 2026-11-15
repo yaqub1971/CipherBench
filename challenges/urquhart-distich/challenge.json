@@ -1,0 +1,52 @@
+{
+  "id": "urquhart-distich",
+  "order": 5,
+  "title": "Urquhart's Cyphral Distich",
+  "origin": "Two lines of numbers printed by Sir Thomas Urquhart at the end of the Proquiritations in Logopandecteision (London, 1653)",
+  "language": [
+    "en",
+    "la"
+  ],
+  "size": "64 numbers, 32 in each line",
+  "ciphertext": [
+    "ciphertext.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "context": {
+    "lines_printed_under_the_numbers": [
+      "Of carping Zoil and despightful Momus,",
+      "Let th' innate baseness be exiled from us,",
+      "Who worthily would hear or read this book;",
+      "For if upon this Cyphral Distich look",
+      "An honest skilful man, he'll therein finde",
+      "His own heart's wishes, and the Author's minde."
+    ],
+    "the_other_poem": "Urquhart printed a second, longer number poem, the Cyphral Octastich of 285 numbers, in The Jewel (1652). It was solved in August 2026 by an AI system, as reported by Vals AI, and the solution was confirmed independently: the k-th number points to a word on page k of The Jewel, and the initials of those words spell a prayer for Charles II. The same rule does not open the distich, which is the poem in this benchmark."
+  },
+  "transcription": {
+    "made_from": "The Works of Sir Thomas Urquhart (Maitland Club, Edinburgh, 1834), p. 417",
+    "notes": [
+      "The 56th number is 38 in the printed text. A widely copied transcription has 33 there."
+    ]
+  },
+  "full_solution": "A named printed text and a fixed rule that turn all 64 numbers into letters, and the 64-letter plaintext.",
+  "verification": {
+    "type": "re-run",
+    "how": "The rule is applied to the named text and must produce the submitted plaintext for all 64 numbers. The plaintext must read as English or Latin and must stand clear of what the same rule gives for the numbers in shuffled order. A bare table that assigns a letter to each number is not accepted: with 32 different numbers in 64 places such a table can be made to say many different things. The named text must be confirmed as a real printing that Urquhart could have used."
+  },
+  "sources": [
+    {
+      "what": "1834 edition, p. 417",
+      "url": "https://archive.org/details/worksofsirthomas00mait"
+    },
+    {
+      "what": "Klaus Schmeh, Top 50 no. 28",
+      "url": "https://scienceblogs.de/klausis-krypto-kolumne/2017/06/30/the-top-50-unsolved-encrypted-messages-28-thomas-urquharts-encrypted-poems/"
+    },
+    {
+      "what": "How the longer poem was read and checked",
+      "url": "https://cyphersolver.com/urquhart.html"
+    }
+  ]
+}

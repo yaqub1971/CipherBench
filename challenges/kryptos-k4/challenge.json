@@ -1,0 +1,77 @@
+{
+  "id": "kryptos-k4",
+  "order": 1,
+  "title": "Kryptos K4",
+  "origin": "Fourth passage of Jim Sanborn's sculpture Kryptos at CIA headquarters, Langley, Virginia (1990)",
+  "language": [
+    "en"
+  ],
+  "size": "97 letters",
+  "ciphertext": [
+    "ciphertext.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "known_plaintext": [
+    {
+      "positions": [
+        22,
+        25
+      ],
+      "text": "EAST",
+      "published": 2020
+    },
+    {
+      "positions": [
+        26,
+        34
+      ],
+      "text": "NORTHEAST",
+      "published": 2020
+    },
+    {
+      "positions": [
+        64,
+        69
+      ],
+      "text": "BERLIN",
+      "published": 2010
+    },
+    {
+      "positions": [
+        70,
+        74
+      ],
+      "text": "CLOCK",
+      "published": 2014
+    }
+  ],
+  "full_solution": "The complete 97-letter plaintext.",
+  "verification": {
+    "type": "answer holder",
+    "how": "The owner of the artist's solution runs an online verifier that compares a submitted plaintext with a stored hash of the artist's text. The local check only screens a submission (97 letters, consistent with the four published fragments); the verifier's answer is final.",
+    "where": "https://paradigm.xyz/kryptos/k4"
+  },
+  "notes": [
+    "Positions are counted from 1. The fragments were published by the artist as hints.",
+    "The plaintext was located among the artist's archived papers in 2025 and has not been published; the cipher method is still unknown."
+  ],
+  "sources": [
+    {
+      "what": "Ciphertext and verifier",
+      "url": "https://paradigm.xyz/kryptos/k4"
+    },
+    {
+      "what": "How the verifier works",
+      "url": "https://www.paradigm.xyz/2026/06/kryptos"
+    },
+    {
+      "what": "Klaus Schmeh, Top 50 no. 4",
+      "url": "https://scienceblogs.de/klausis-krypto-kolumne/2019/02/11/the-top-50-unsolved-encrypted-messages-4-kryptos/"
+    },
+    {
+      "what": "The 2020 fragments",
+      "url": "https://scienceblogs.de/klausis-krypto-kolumne/2020/08/24/jim-sanborn-publishes-another-new-kryptos-clue/"
+    }
+  ]
+}
