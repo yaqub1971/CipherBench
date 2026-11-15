@@ -93,9 +93,16 @@ Each challenge was selected because a correct answer can be verified and checked
 - **Someone holds the answer.** For Kryptos K4 and the Grüß cipher, a hash of the answer was stored in advance. A submitted answer either matches or it does not.
 - **The method is fixed.** For the transposition challenges, the French message and the Urquhart poem, a claimed key is simply run again. It either produces a readable message or it does not.
 
+## How answers are graded
+
+The AI system is asked to write a report explaining how it solved each puzzle. A proposed solution is then confirmed in two ways:
+
+1. **On the challenge's website.** Where a website exists that checks solutions, the proposed solution is checked there.
+2. **By a human.** A human reads the report and confirms that the proposed solution is correct.
+
 ## Scoring
 
-Each challenge is worth 20%. A challenge counts only when it is solved in full and the solution has passed its check.
+Each challenge is worth 20%. A challenge counts only when it is solved in full and the solution has been confirmed.
 
 | Challenges solved | Score |
 |---|---|
@@ -107,16 +114,6 @@ Each challenge is worth 20%. A challenge counts only when it is solved in full a
 | 5 | 100% |
 
 Partial solutions are not accepted. One of the three transposition ciphertexts, or most of a message, scores nothing.
-
-An answer counts once it has been confirmed. The checker does the mechanical part and reports the answer as awaiting confirmation until then.
-
-| Challenge | What the checker does | What confirms the answer |
-|---|---|---|
-| Kryptos K4 | Confirms 97 letters that fit the four published fragments | The owner's verifier accepts the text |
-| Double Column Transposition Reloaded | Runs the keys of all three parts and compares the result with the submitted plaintexts | MysteryTwister's solution check accepts them |
-| Grüß's cipher | Confirms a ten-letter word with a method, and tries it against the published hash | The author confirms the answer |
-| French Resistance message | Runs the keys and compares the result with the submitted plaintext | The plaintext is confirmed to be the French message |
-| Urquhart's Cyphral Distich | Applies the rule to the named text and compares the result with the submitted plaintext | The named text and the reading are confirmed |
 
 ## Running the checker
 
