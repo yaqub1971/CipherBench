@@ -6,6 +6,10 @@ CypherBench is a benchmark of five open cipher challenges. Each one is unsolved,
 
 All five were unsolved on November 2026.
 
+## Testing an AI system
+
+Give the AI system [`INSTRUCTIONS.md`](INSTRUCTIONS.md). It contains the task, the five ciphertexts and what the report must contain. The AI system may use any method to arrive at an answer.
+
 ## The five challenges
 
 | # | Challenge | Year | Size | Language | How a correct answer is checked |
@@ -95,7 +99,7 @@ Each challenge was selected because a correct answer can be verified and checked
 
 ## How answers are graded
 
-The AI system is asked to write a report explaining how it solved each puzzle. A proposed solution is then confirmed in two ways:
+The AI system is asked to write a report explaining how it solved each puzzle. What the report must contain is set out in [`INSTRUCTIONS.md`](INSTRUCTIONS.md). A proposed solution is then confirmed in two ways:
 
 1. **On the challenge's website.** Two of the five challenges have a website that checks solutions. For these, the proposed solution is checked there:
    - **Kryptos K4:** the owner's [online verifier](https://paradigm.xyz/kryptos/k4).
