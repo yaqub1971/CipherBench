@@ -17,6 +17,18 @@
     "Written on the sheet below the groups: 455, a five-character group that is hard to read, the count 94, and the line 'mon 20 du 5.11.44 ... NR 53 - GR 94'.",
     "The letter counts fit French better than the other languages tested, which points to a transposition cipher; a double transposition is the usual guess for this kind of traffic."
   ],
+  "published_readings": {
+    "by": "Klaus Schmeh, who published the sheet on 12 July 2026",
+    "note": "These are his interpretations, not confirmed facts.",
+    "source": "https://klausschmeh.net/an-encrypted-message-from-the-french-resistance-can-you-decipher-it/",
+    "readings": [
+      "The first and last groups (JFGEU) are almost certainly indicator groups, repeated, which were used to derive the key.",
+      "The second group (QTIIO) appears to be a special prefix and not part of the message. According to notes that came with the sheet, it was itself enciphered with a Playfair cipher and told headquarters which coding procedure the operator used.",
+      "The number 455 is the length of the message as transmitted, not counting the indicator groups. Without the prefix, 450 letters of ciphertext remain.",
+      "If the cipher is a double transposition, the two keywords were probably between 15 and 35 letters long. The message may contain a few null letters at the beginning or the end.",
+      "Operators often put the date of writing into the message. The plaintext may therefore contain 'mon vingt du cinq onze quarante quatre', somewhere in the middle."
+    ]
+  },
   "transcription": {
     "made_from": "https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png",
     "notes": [

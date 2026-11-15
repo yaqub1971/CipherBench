@@ -1,0 +1,67 @@
+{
+  "id": "enigma-u534",
+  "order": 6,
+  "title": "Enigma message from U-534, 1945",
+  "origin": "German Navy radio message of 1 May 1945, taken down on board the submarine U-534, enciphered on the Enigma M4 and still unbroken; known as P1030680",
+  "language": [
+    "de"
+  ],
+  "size": "72 letters",
+  "ciphertext": [
+    "ciphertext.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "machine": "German Navy Enigma M4: four wheels, plugboard",
+  "form": {
+    "time": "10:30",
+    "date": "1.5.45",
+    "groups": 22,
+    "indicator_groups": "VROL NMKA, repeated at the end of the message; the 18 groups between them are the ciphertext"
+  },
+  "transcription": {
+    "by": "Michael Hörenberg",
+    "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken",
+    "notes": [
+      "The copy here follows the published transcription. The photograph of the form was compared for layout and count, not letter by letter."
+    ]
+  },
+  "context": "Taken down on board the submarine U-534, which was sunk on 5 May 1945 and raised in 1993.",
+  "published_hints": [
+    {
+      "hint": "The form is marked 'M-Thetis', and the indicator points to the key net Thetis. The boat's radio operator tried the key net Potsdam first and got gibberish.",
+      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (analysis by Dan Girard)"
+    },
+    {
+      "hint": "Deciphered with the day's bigram table, the indicator groups read EACH SEDM. At the end of the message the first group is written VAOL, and read that way they give KACH OEDM.",
+      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (analysis by Dan Girard)"
+    },
+    {
+      "hint": "Every other message from U-534 that has been broken was enciphered on a standard M4. Other messages dated 1 May 1945 are in the key net Potsdam, and their settings are published on the same site.",
+      "source": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages"
+    },
+    {
+      "hint": "The Enigma@Home computing project is trying to decrypt this message.",
+      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken"
+    }
+  ],
+  "full_solution": "The Enigma settings (wheel order including the fourth wheel, reflector, ring settings, plugboard connections and start position) and the complete German plaintext.",
+  "verification": {
+    "type": "re-run",
+    "how": "The submitted settings are entered into an Enigma simulator and must produce the submitted plaintext exactly. The answer counts once the plaintext is confirmed to be a German message. Only the standard Navy M4 counts. A machine with invented wiring does not count."
+  },
+  "notes": [
+    "On 2026-11-15 Michael Hörenberg's site listed P1030680 as unbroken.",
+    "Michael Hörenberg asks solvers to supply all settings so that a break can be checked independently."
+  ],
+  "sources": [
+    {
+      "what": "U-534 message: ciphertext, message form and analysis",
+      "url": "https://enigma.hoerenberg.com/index.php?cat=Unbroken"
+    },
+    {
+      "what": "U-534: the other messages from the boat",
+      "url": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages"
+    }
+  ]
+}

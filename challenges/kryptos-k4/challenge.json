@@ -46,6 +46,27 @@
       "published": 2014
     }
   ],
+  "artist_hints": {
+    "collected": "2026-11-15",
+    "hints": [
+      {
+        "hint": "\"Two events had a significant role to play while I was writing the plain text of Kryptos in 1988. The first was my second trip to Egypt in late 1986, and the second was the fall of the Berlin Wall.\"",
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+      },
+      {
+        "hint": "\"The Berlin Clock in K4 is the World Clock in Berlin that was the gathering place for the crowds that brought down the Berlin wall.\"",
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+      },
+      {
+        "hint": "\"The codes of Kryptos from the morse code at the beginning through K5 are about delivering a message.\" K5 is a further passage that the artist has announced and not yet released.",
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+      },
+      {
+        "hint": "Writing about a future owner who might not keep K4 secret: \"If they don't, then (CLUE) what's the point?\"",
+        "given": "Open letter of 14 August 2025"
+      }
+    ]
+  },
   "full_solution": "The complete 97-letter plaintext.",
   "verification": {
     "type": "answer holder",
@@ -72,6 +93,18 @@
     {
       "what": "The 2020 fragments",
       "url": "https://scienceblogs.de/klausis-krypto-kolumne/2020/08/24/jim-sanborn-publishes-another-new-kryptos-clue/"
+    },
+    {
+      "what": "The artist's open letter of 14 August 2025",
+      "url": "https://elonka.com/kryptos/OpenLetterAug2025.html"
+    },
+    {
+      "what": "Scientific American on the hints of November 2025",
+      "url": "https://www.scientificamerican.com/article/cia-kryptos-puzzle-creator-releases-final-clues/"
+    },
+    {
+      "what": "Popular Mechanics, quoting the open letter of November 2025",
+      "url": "https://www.popularmechanics.com/science/math/a69447312/kryptos-puzzle-clues/"
     }
   ]
 }
