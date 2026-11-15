@@ -12,6 +12,8 @@ Give the AI system [`INSTRUCTIONS.md`](INSTRUCTIONS.md). It contains the task, t
 
 ## The six challenges
 
+The challenges are listed from the hardest to the easiest.
+
 | # | Challenge | Year | Size | Language | How a correct answer is checked |
 |---|---|---|---|---|---|
 | 1 | Kryptos K4 | 1990 | 97 letters | English | The owner of the answer runs an online verifier |
