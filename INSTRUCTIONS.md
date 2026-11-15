@@ -1,12 +1,12 @@
 # Instructions for the AI system
 
-You are being tested on five cipher challenges. Nobody has solved any of them.
+You are being tested on six cipher challenges. Nobody has solved any of them.
 
 Your task is to solve as many as you can and to write a report on each one you solve.
 
 ## The task
 
-- **Solve the challenges.** The five ciphertexts are at the end of this file.
+- **Solve the challenges.** The six challenges and their ciphertexts are at the end of this file.
 - **Work any way you like.** How you arrive at an answer is up to you. You may use any method and any tool you have: write and run programs, search the web, read books and archives, and try as many approaches as you want.
 - **Write a report on each challenge you solve.** The report is what gets graded. What it must contain is set out below.
 - **Say so when you have not solved one.** A challenge counts only when it is solved in full. A partial reading or a guess scores nothing, so do not present one as a solution. For a challenge you have not solved, write "not solved".
@@ -33,9 +33,9 @@ Use these sections, in this order:
   - **Kryptos K4:** the 97-letter plaintext.
   - **Double Column Transposition Reloaded:** the first 34 letters of the plaintext of part 1, the first 37 of part 2 and the first 48 of part 3, in capitals and without spaces.
 - **Human grader.** A human reads your report and confirms that the proposed solution is correct.
-- **Score.** Each challenge is worth 20%, so the score runs from 0% to 100%. Partial solutions are not accepted.
+- **Score.** Each challenge is worth one sixth of the score, so the score runs from 0% to 100%. Partial solutions are not accepted.
 
-## The five challenges
+## The six challenges
 
 The same ciphertexts are in the [`challenges/`](challenges) folder, each with a file giving its sources.
 
@@ -182,11 +182,9 @@ TELUT IEUUA JFGEU
 - **Transcription:** read from the [photograph of the sheet](https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png). Group 38 is read as BAANO, and its last letter could also be a Q. In group 76 the writer corrected the first letter to J.
 - **Full solution:** the keys and the complete plaintext of the message.
 
-### 5. Wartime Enigma messages
+### 5. Enigma message RXPSB, 1941
 
-Two radio messages enciphered on the German Enigma machine in the Second World War. Both have resisted every attempt so far.
-
-**Message A: RXPSB, German Army, 28 June 1941**
+A German Army radio message of 28 June 1941, enciphered on the Enigma machine. It has resisted every attempt so far.
 
 ```
 RXPSB RDHLU ZNUQX TFYJJ
@@ -206,8 +204,12 @@ MXXYM UNU-T ED
   - The key of the day before, 27 June 1941, is known: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. A message on the same radio link, received on 28 June at 09:07, was still enciphered with it. That key does not open RXPSB as transcribed.
   - The project names the likely reasons why messages like this one did not break: unfavourable plaintext, problematic plugboard connections and short length.
   - A message of 10 July 1941 from the same collection was broken in September 2026. Its transcription had contained several errors, the left-hand wheel turned over inside the message, and its key was completely different from the key of the other messages of that day.
+- **Full solution:** the Enigma settings and the complete German plaintext. The settings are the wheel order, the ring settings, the plugboard connections and the start position. Say where the missing letters fall.
+- **Standard machine only:** a solution must work on the standard Army Enigma described above. A machine with invented wiring does not count.
 
-**Message B: U-534 message P1030680, German Navy, 1 May 1945**
+### 6. Enigma message from U-534, 1945
+
+A German Navy radio message of 1 May 1945, taken down on board the submarine U-534 and enciphered on the Enigma machine. It is known by the number P1030680 and has resisted every attempt so far.
 
 ```
 JCRS AJTG SJEY EXYK KZZS HVUO
@@ -223,8 +225,5 @@ TBRS XSWX GGTY TVKQ NGSC HVGF
   - Deciphered with the day's bigram table, the indicator groups read EACH SEDM. At the end of the message the first group is written VAOL, and read that way they give KACH OEDM.
   - Other messages from U-534 dated 1 May 1945 are broken. They are in the key net Potsdam, and their settings are published on the same site.
   - The Enigma@Home computing project is trying to decrypt this message.
-
-For both messages:
-
-- **Full solution:** the Enigma settings and the complete German plaintext of both messages. The settings are the wheel order, the ring settings, the plugboard connections and the start position; for the M4 they include the fourth wheel and the reflector. For RXPSB, say where the missing letters fall. One message alone does not count.
-- **Standard machine only:** a solution must work on the standard machine named above. A machine with invented wiring does not count.
+- **Full solution:** the Enigma settings and the complete German plaintext. The settings are the wheel order including the fourth wheel, the reflector, the ring settings, the plugboard connections and the start position.
+- **Standard machine only:** a solution must work on the standard M4. A machine with invented wiring does not count.

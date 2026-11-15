@@ -1,0 +1,75 @@
+{
+  "id": "enigma-rxpsb",
+  "order": 5,
+  "title": "Enigma message RXPSB, 1941",
+  "origin": "German Army radio message Nr. 53 of 28 June 1941, enciphered on the Enigma machine and still unbroken",
+  "language": [
+    "de"
+  ],
+  "size": "107 letters, 2 of them unread",
+  "ciphertext": [
+    "ciphertext.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "machine": "German Army Enigma: three wheels chosen from I to V, plugboard; the keys recovered for this collection all use reflector B",
+  "form": {
+    "received": "28.06.1941 at 11:26",
+    "radio_link": "5l8",
+    "sender": "A.K. (an army corps)",
+    "addressee": "Ib (quartermaster)",
+    "header": "(1020) - 114 - ZDN QMF",
+    "header_meaning": "Enciphered at 10:20; announced as 114 letters, the first group included; indicator ZDN QMF. With the day's settings the receiver set the wheels to ZDN and deciphered QMF to get the start position for the text."
+  },
+  "first_group": "RXPSB is not enciphered text. It told the receiver which key was in use.",
+  "transcription": {
+    "by": "Geoff Sullivan, Olaf Ostwald and Frode Weierud",
+    "facsimile": "https://cryptocellar.org/bgac/spruch/28061941-053-in.pdf",
+    "notes": [
+      "A hyphen marks a letter the receiving operator did not get. There are two.",
+      "The form holds 112 letters and marks where 114 are announced, so two more letters appear to be missing.",
+      "The copy here follows the published transcription. The facsimile was compared for layout and count, not letter by letter."
+    ]
+  },
+  "context": "Radio traffic of German Army Group North during the invasion of the Soviet Union (Operation Barbarossa).",
+  "published_hints": [
+    {
+      "hint": "The key of the day before, 27 June 1941, is known: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. Message Nr. 51 on the same radio link, received on 28 June at 09:07, was still enciphered with it.",
+      "source": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html"
+    },
+    {
+      "hint": "The key of 27 June 1941 does not open RXPSB as transcribed.",
+      "source": "Checked for this benchmark on 2026-11-15 with an Enigma simulator that reproduces the published start position of message Nr. 45."
+    },
+    {
+      "hint": "The project names the likely reasons why messages like this one did not break: unfavourable plaintext, problematic plugboard connections and short length.",
+      "source": "https://cryptocellar.org/bgac/g-army-messages.html"
+    },
+    {
+      "hint": "Message MVUEH of 10 July 1941, from the same collection, was broken in September 2026. Its transcription had contained several errors, the left-hand wheel turned over inside the message, and its key was completely different from the key of the other messages of that day.",
+      "source": "https://cryptocellar.org/bgac/the-mvueh-break.html"
+    }
+  ],
+  "full_solution": "The Enigma settings (wheel order, ring settings, plugboard connections and start position), the complete German plaintext, and the places where letters are missing.",
+  "verification": {
+    "type": "re-run",
+    "how": "The submitted settings are entered into an Enigma simulator and must produce the submitted plaintext exactly. The answer counts once the plaintext is confirmed to be a German message. Only the standard Army Enigma with wheels I to V counts. A machine with invented wiring does not count."
+  },
+  "notes": [
+    "On 2026-11-15 Frode Weierud's site listed RXPSB as unbroken."
+  ],
+  "sources": [
+    {
+      "what": "RXPSB: ciphertext and message form",
+      "url": "https://cryptocellar.org/bgac/g-army-messages.html"
+    },
+    {
+      "what": "RXPSB: list of still unbroken messages",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list-unbroken.html"
+    },
+    {
+      "what": "RXPSB: recovered keys, June to October 1941",
+      "url": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html"
+    }
+  ]
+}
