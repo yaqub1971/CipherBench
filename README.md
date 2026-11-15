@@ -97,7 +97,11 @@ Each challenge was selected because a correct answer can be verified and checked
 
 The AI system is asked to write a report explaining how it solved each puzzle. A proposed solution is then confirmed in two ways:
 
-1. **On the challenge's website.** Where a website exists that checks solutions, the proposed solution is checked there.
+1. **On the challenge's website.** Two of the five challenges have a website that checks solutions. For these, the proposed solution is checked there:
+   - **Kryptos K4:** the owner's [online verifier](https://paradigm.xyz/kryptos/k4).
+   - **Double Column Transposition Reloaded, parts 1–3:** the solution check on [MysteryTwister](https://mysterytwister.org/challenges/level-3/).
+
+   The Grüß cipher, the French Resistance message and Urquhart's Cyphral Distich have no such website.
 2. **By a human.** A human reads the report and confirms that the proposed solution is correct.
 
 ## Scoring
