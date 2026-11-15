@@ -119,45 +119,6 @@ Each challenge is worth 20%. A challenge counts only when it is solved in full a
 
 Partial solutions are not accepted. One of the three transposition ciphertexts, or most of a message, scores nothing.
 
-## Running the checker
-
-It needs Python 3.9 or later and nothing else.
-
-```bash
-python -m cypherbench list
-```
-
-```bash
-python -m cypherbench score submissions/TEMPLATE.json
-```
-
-Once an answer has been confirmed, name that challenge with `--confirmed`:
-
-```bash
-python -m cypherbench score my-answers.json --confirmed kryptos-k4,gruess-cipher
-```
-
-Answers go in one JSON file. [`submissions/TEMPLATE.json`](submissions/TEMPLATE.json) shows the format.
-
-- **Column keys** are given in the order they were used to encipher. A key is either a keyword or a list of numbers giving each column's rank, so `"ZEBRAS"` and `[6, 3, 2, 4, 1, 5]` are the same key.
-- **The French message** also needs the run of groups that forms the message, for example `"groups": [3, 92]`.
-- **The Urquhart poem** needs the source text as a plain-text file, with its pages or sections separated by lines that start with `===`, and one of the rules listed in [`cypherbench/bookindex.py`](cypherbench/bookindex.py).
-
-The tests include the 2007 transposition challenge with its published keys, as a real case with a known answer:
-
-```bash
-python -m unittest discover -s tests
-```
-
-## What is in the repository
-
-| Path | Contents |
-|---|---|
-| `challenges/` | The five ciphertexts, each with a file describing its origin, what is known, and how it is checked |
-| `cypherbench/` | The checker and the scorer |
-| `submissions/` | The answer template |
-| `tests/` | Tests for the checker |
-
 ## Sources and credit
 
 The challenges belong to their creators. They are reproduced here, with their sources, so that answers can be checked.
