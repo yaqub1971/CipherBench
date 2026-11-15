@@ -2,7 +2,7 @@
 
 Can an AI system solve a cipher that nobody has solved?
 
-CypherBench is a benchmark of five open cipher challenges. Each one is unsolved, and each one was selected because a correct answer can be verified and checked.
+CypherBench is a benchmark of five open cipher challenges. Each one is unsolved, and each one was selected because a correct answer can be verified.
 
 All five were unsolved on 15 November 2026.
 
