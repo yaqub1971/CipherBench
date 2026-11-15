@@ -18,7 +18,7 @@ Give the AI system [`INSTRUCTIONS.md`](INSTRUCTIONS.md). It contains the task, t
 | 2 | Double Column Transposition Reloaded, parts 1–3 | 2013 | 613, 637 and 1,006 letters | English, German | The keys are re-run on the ciphertext |
 | 3 | Grüß's mental-arithmetic cipher | 2026 | 31 digits | German | The author published a hash of the answer in advance |
 | 4 | French Resistance message | 1944 | 465 letters | French | The keys are re-run on the ciphertext |
-| 5 | Urquhart's Cyphral Distich | 1653 | 64 numbers | English or Latin | The rule is re-run against a named printed text |
+| 5 | Wartime Enigma messages, two messages | 1941, 1945 | 107 and 72 letters | German | The settings are re-run on an Enigma simulator |
 
 The ciphertexts and their details are in [`challenges/`](challenges).
 
@@ -78,24 +78,27 @@ A handwritten sheet of 93 five-letter groups, found with a clandestine radio set
 - **Full solution:** the keys and the complete plaintext of the message.
 - **Check:** the keys are applied to the ciphertext and must produce the submitted plaintext exactly. The answer counts once the plaintext is confirmed to be the French message.
 
-### 5. Urquhart's Cyphral Distich
+### 5. Wartime Enigma messages
 
-Sir Thomas Urquhart, a Scottish writer, printed two poems as rows of numbers.
+The Enigma was the cipher machine of the German armed forces in the Second World War. Several thousand of its radio messages survive. Most of those that have been attacked are now broken, but a few have resisted every attempt. Two of them are used here.
 
-- **The longer poem has been solved.** It has 285 numbers and appeared in 1652. An AI system solved it in August 2026, as reported by Vals AI, and the solution has been confirmed independently. Each number points to a word on a page of Urquhart's own book, and the first letters of those words spell a prayer for King Charles II.
-- **The shorter poem is still open.** It has 64 numbers and appeared in 1653. The rule that opens the longer poem does not open this one. The shorter poem is the challenge here.
+| Message | Date | Machine | Size |
+|---|---|---|---|
+| RXPSB | 28 June 1941 | Army Enigma, three wheels | 107 letters, 2 of them unread |
+| U-534 message P1030680 | 1 May 1945 | Navy Enigma M4, four wheels | 72 letters |
 
-Under the numbers Urquhart printed a promise that a skilful reader will find in them "his own heart's wishes, and the Author's minde".
-
-- **Full solution:** a named printed text and a fixed rule that turn all 64 numbers into letters, plus the 64-letter plaintext.
-- **Check:** the rule is applied to the named text and must produce the submitted plaintext for every number. The answer counts once the named text is confirmed as a real printing that Urquhart could have used, and the plaintext as a readable line.
+- **RXPSB** is a German Army message from the first week of the invasion of the Soviet Union. [Frode Weierud's CryptoCellar](https://cryptocellar.org/bgac/g-army-messages.html) publishes it with a copy of the original message form.
+- **The U-534 message** was taken down on board the submarine U-534, four days before she was sunk. The boat's own radio operator tried to decipher it and failed. [Michael Hörenberg](https://enigma.hoerenberg.com/index.php?cat=Unbroken) publishes it.
+- **Full solution:** for both messages, the Enigma settings and the complete German plaintext. The settings are the wheel order, the ring settings, the plugboard connections and the start position.
+- **Check:** the settings are entered into an Enigma simulator and must produce the submitted plaintext exactly. The answer counts once the plaintext is confirmed to be a German message.
+- **Note:** a solution must work on the standard machine of the time. A machine with invented wiring could be made to produce any text.
 
 ## Why these five
 
 Each challenge was selected because a correct answer can be verified and checked:
 
 - **Someone holds the answer.** For Kryptos K4 and the Grüß cipher, a hash of the answer was stored in advance. A submitted answer either matches or it does not.
-- **The method is fixed.** For the transposition challenges, the French message and the Urquhart poem, a claimed key is simply run again. It either produces a readable message or it does not.
+- **The method is fixed.** For the transposition challenges, the French message and the Enigma messages, a claimed key is simply run again. It either produces a readable message or it does not.
 
 ## How answers are graded
 
@@ -105,7 +108,7 @@ The AI system is asked to write a report explaining how it solved each puzzle. W
    - **Kryptos K4:** the owner's [online verifier](https://paradigm.xyz/kryptos/k4).
    - **Double Column Transposition Reloaded, parts 1–3:** the solution check on [MysteryTwister](https://mysterytwister.org/challenges/level-3/).
 
-   The Grüß cipher, the French Resistance message and Urquhart's Cyphral Distich have no such website.
+   The Grüß cipher, the French Resistance message and the Enigma messages have no such website.
 2. **By a human.** A human reads the report and confirms that the proposed solution is correct.
 
 ## Scoring
@@ -121,7 +124,7 @@ Each challenge is worth 20%. A challenge counts only when it is solved in full a
 | 4 | 80% |
 | 5 | 100% |
 
-Partial solutions are not accepted. One of the three transposition ciphertexts, or most of a message, scores nothing.
+Partial solutions are not accepted. One of the three transposition ciphertexts, one of the two Enigma messages, or most of a message, scores nothing.
 
 ## Sources and credit
 
@@ -131,5 +134,5 @@ The challenges belong to their creators. They are reproduced here, with their so
 - **Double Column Transposition Reloaded:** Arno Wacker, Bernhard Esslinger and Klaus Schmeh, on [MysteryTwister](https://mysterytwister.org/challenges/level-3/).
 - **Grüß's cipher:** Wenzel Grüß, published by [Klaus Schmeh](https://klausschmeh.net/can-you-solve-this-puzzle-from-a-world-class-mental-calculator-and-win-100-euros/).
 - **French Resistance message:** sheet shown by Didier Clarençon, published by [Klaus Schmeh](https://klausschmeh.net/an-encrypted-message-from-the-french-resistance-can-you-decipher-it/).
-- **Urquhart's Cyphral Distich:** text from the [1834 edition of Urquhart's works](https://archive.org/details/worksofsirthomas00mait), page 417. The account of the longer poem follows [Cyphersolver](https://cyphersolver.com/urquhart.html).
+- **Enigma messages:** RXPSB from [Frode Weierud's CryptoCellar](https://cryptocellar.org/bgac/g-army-messages.html), a project of Geoff Sullivan, Olaf Ostwald and Frode Weierud. The U-534 message from [Michael Hörenberg](https://enigma.hoerenberg.com/index.php?cat=Unbroken).
 - **Background:** Klaus Schmeh's [list of the top 50 unsolved encrypted messages](https://scienceblogs.de/klausis-krypto-kolumne/the-top-50-unsolved-encrypted-messages/) and his [current site](https://klausschmeh.net/).

@@ -48,6 +48,11 @@ OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZX
 ```
 
 - **Published by the artist:** letters 22–25 of the plaintext are EAST, 26–34 are NORTHEAST, 64–69 are BERLIN and 70–74 are CLOCK. Positions are counted from 1.
+- **More hints from the artist:** the first three are from his open letter of November 2025, as quoted by Popular Mechanics. The fourth is from his open letter of 14 August 2025.
+  - "Two events had a significant role to play while I was writing the plain text of Kryptos in 1988. The first was my second trip to Egypt in late 1986, and the second was the fall of the Berlin Wall."
+  - "The Berlin Clock in K4 is the World Clock in Berlin that was the gathering place for the crowds that brought down the Berlin wall."
+  - "The codes of Kryptos from the morse code at the beginning through K5 are about delivering a message." K5 is a further passage that he has announced and not yet released.
+  - Writing about a future owner who might not keep K4 secret: "If they don't, then (CLUE) what's the point?"
 - **Background:** the plaintext was found among the artist's archived papers in 2025. It has not been published, and how the cipher works is still unknown.
 - **Full solution:** the complete 97-letter plaintext, with the cipher and key that produce it.
 
@@ -168,18 +173,58 @@ TELUT IEUUA JFGEU
 
 - **What is known:** the first and last groups are identical. The mix of letters matches French, which means the letters were rearranged, not replaced. A double column transposition is the usual guess for this kind of radio traffic.
 - **Written on the sheet below the groups:** the number 455, a five-character group that is hard to read, the count 94, and the line "mon 20 du 5.11.44 ... NR 53 - GR 94".
+- **Readings by Klaus Schmeh, who published the sheet:** these are his interpretations, not confirmed facts.
+  - The first and last groups (JFGEU) are almost certainly indicator groups, repeated, which were used to derive the key.
+  - The second group (QTIIO) appears to be a special prefix and not part of the message. According to notes that came with the sheet, it was itself enciphered with a Playfair cipher and told headquarters which coding procedure the operator used.
+  - The number 455 is the length of the message as transmitted, not counting the indicator groups. Without the prefix, 450 letters of ciphertext remain.
+  - If the cipher is a double transposition, the two keywords were probably between 15 and 35 letters long. The message may contain a few null letters at the beginning or the end.
+  - Operators often put the date of writing into the message. The plaintext may therefore contain "mon vingt du cinq onze quarante quatre", somewhere in the middle.
 - **Transcription:** read from the [photograph of the sheet](https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png). Group 38 is read as BAANO, and its last letter could also be a Q. In group 76 the writer corrected the first letter to J.
 - **Full solution:** the keys and the complete plaintext of the message.
 
-### 5. Urquhart's Cyphral Distich
+### 5. Wartime Enigma messages
 
-Two lines of numbers printed by Sir Thomas Urquhart in 1653, 32 numbers in each line.
+Two radio messages enciphered on the German Enigma machine in the Second World War. Both have resisted every attempt so far.
+
+**Message A: RXPSB, German Army, 28 June 1941**
 
 ```
-5 3 27 38 32 14 21 8 66 8 70 39 5 9 12 18 2 3 56 5 1 7 3 2 13 19 3 25 9 3 16 6
-25 15 13 6 11 20 5 1 2 12 1 20 20 49 20 20 35 33 4 6 8 35 5 38 5 5 18 10 3 11 32 42
+RXPSB RDHLU ZNUQX TFYJJ
+GX-WE OUBHL KSCGY MUTUP
+IGYGQ GANNM PMQGA SEQGT
+MLGHT UAFAM SNRDD XHXRQ
+OQAZL GWTUH JGPDD FJLUC
+MXXYM UNU-T ED
 ```
 
-- **Printed under the numbers:** "For if upon this Cyphral Distich look / An honest skilful man, he'll therein finde / His own heart's wishes, and the Author's minde."
-- **His other number poem has been solved.** Urquhart printed a longer poem of 285 numbers in 1652. An AI system solved it in August 2026, as reported by Vals AI, and the solution has been confirmed independently. Each number points to a word on a page of Urquhart's own book, and the first letters of those words spell a prayer for King Charles II. The same rule does not open the distich.
-- **Full solution:** a named printed text and a fixed rule that turn all 64 numbers into letters, plus the 64-letter plaintext.
+- **Machine:** the German Army Enigma, with three wheels chosen from five (I to V) and a plugboard. The keys recovered for this collection of messages all use reflector B.
+- **First group:** RXPSB is not enciphered text. It told the receiver which key was in use.
+- **Header on the message form:** `(1020) - 114 - ZDN QMF`. The message was enciphered at 10:20 and is announced as 114 letters long, the first group included. ZDN QMF is the indicator: with the day's settings, the receiver set the wheels to ZDN and deciphered QMF to get the start position for the text.
+- **Transcription:** by Frode Weierud's project, from the [original message form](https://cryptocellar.org/bgac/spruch/28061941-053-in.pdf). A hyphen marks a letter the receiving operator did not get. The form holds 112 letters and marks where 114 are announced, so two more letters appear to be missing.
+- **Where it comes from:** radio traffic of German Army Group North during the invasion of the Soviet Union. An army corps ("A.K.") sent the message to a quartermaster's radio station ("Ib"), which received it at 11:26.
+- **Published hints:** from Frode Weierud's site.
+  - The key of the day before, 27 June 1941, is known: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. A message on the same radio link, received on 28 June at 09:07, was still enciphered with it. That key does not open RXPSB as transcribed.
+  - The project names the likely reasons why messages like this one did not break: unfavourable plaintext, problematic plugboard connections and short length.
+  - A message of 10 July 1941 from the same collection was broken in September 2026. Its transcription had contained several errors, the left-hand wheel turned over inside the message, and its key was completely different from the key of the other messages of that day.
+
+**Message B: U-534 message P1030680, German Navy, 1 May 1945**
+
+```
+JCRS AJTG SJEY EXYK KZZS HVUO
+CTRF RCRP FVYP LKPP LGRH VVBB
+TBRS XSWX GGTY TVKQ NGSC HVGF
+```
+
+- **Machine:** the German Navy Enigma M4, with four wheels and a plugboard. Every other message from U-534 that has been broken was enciphered on a standard M4.
+- **On the message form:** time 10:30, date 1.5.45, and 22 groups of four letters. The first two groups, VROL NMKA, are the indicator. They are repeated at the end. The 18 groups between them are the ones shown above.
+- **Transcription:** by Michael Hörenberg, from the [message form](https://enigma.hoerenberg.com/index.php?cat=Unbroken) found on the boat.
+- **Published hints:** from Michael Hörenberg's site, including an analysis of the form by Dan Girard.
+  - The form is marked "M-Thetis", and the indicator points to the key net Thetis. The boat's radio operator tried the key net Potsdam first and got gibberish.
+  - Deciphered with the day's bigram table, the indicator groups read EACH SEDM. At the end of the message the first group is written VAOL, and read that way they give KACH OEDM.
+  - Other messages from U-534 dated 1 May 1945 are broken. They are in the key net Potsdam, and their settings are published on the same site.
+  - The Enigma@Home computing project is trying to decrypt this message.
+
+For both messages:
+
+- **Full solution:** the Enigma settings and the complete German plaintext of both messages. The settings are the wheel order, the ring settings, the plugboard connections and the start position; for the M4 they include the fourth wheel and the reflector. For RXPSB, say where the missing letters fall. One message alone does not count.
+- **Standard machine only:** a solution must work on the standard machine named above. A machine with invented wiring does not count.

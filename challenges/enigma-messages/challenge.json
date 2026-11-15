@@ -1,0 +1,130 @@
+{
+  "id": "enigma-messages",
+  "order": 5,
+  "title": "Wartime Enigma messages",
+  "origin": "Two radio messages enciphered on the German Enigma machine in the Second World War that have resisted every attempt to break them",
+  "language": [
+    "de"
+  ],
+  "size": "two messages of 107 and 72 letters",
+  "ciphertext": [
+    "rxpsb.txt",
+    "u534-p1030680.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "messages": {
+    "rxpsb": {
+      "file": "rxpsb.txt",
+      "name": "RXPSB, message Nr. 53 of 28 June 1941",
+      "machine": "German Army Enigma: three wheels chosen from I to V, plugboard; the keys recovered for this collection all use reflector B",
+      "letters": 107,
+      "form": {
+        "received": "28.06.1941 at 11:26",
+        "radio_link": "5l8",
+        "sender": "A.K. (an army corps)",
+        "addressee": "Ib (quartermaster)",
+        "header": "(1020) - 114 - ZDN QMF",
+        "header_meaning": "Enciphered at 10:20; announced as 114 letters, the first group included; indicator ZDN QMF. With the day's settings the receiver set the wheels to ZDN and deciphered QMF to get the start position for the text."
+      },
+      "first_group": "RXPSB is not enciphered text. It told the receiver which key was in use.",
+      "transcription": {
+        "by": "Geoff Sullivan, Olaf Ostwald and Frode Weierud",
+        "facsimile": "https://cryptocellar.org/bgac/spruch/28061941-053-in.pdf",
+        "notes": [
+          "A hyphen marks a letter the receiving operator did not get. There are two.",
+          "The form holds 112 letters and marks where 114 are announced, so two more letters appear to be missing.",
+          "The copy here follows the published transcription. The facsimile was compared for layout and count, not letter by letter."
+        ]
+      },
+      "context": "Radio traffic of German Army Group North during the invasion of the Soviet Union (Operation Barbarossa).",
+      "published_hints": [
+        {
+          "hint": "The key of the day before, 27 June 1941, is known: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. Message Nr. 51 on the same radio link, received on 28 June at 09:07, was still enciphered with it.",
+          "source": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html"
+        },
+        {
+          "hint": "The key of 27 June 1941 does not open RXPSB as transcribed.",
+          "source": "Checked for this benchmark on 2026-11-15 with an Enigma simulator that reproduces the published start position of message Nr. 45."
+        },
+        {
+          "hint": "The project names the likely reasons why messages like this one did not break: unfavourable plaintext, problematic plugboard connections and short length.",
+          "source": "https://cryptocellar.org/bgac/g-army-messages.html"
+        },
+        {
+          "hint": "Message MVUEH of 10 July 1941, from the same collection, was broken in September 2026. Its transcription had contained several errors, the left-hand wheel turned over inside the message, and its key was completely different from the key of the other messages of that day.",
+          "source": "https://cryptocellar.org/bgac/the-mvueh-break.html"
+        }
+      ]
+    },
+    "u534-p1030680": {
+      "file": "u534-p1030680.txt",
+      "name": "U-534 message P1030680 of 1 May 1945",
+      "machine": "German Navy Enigma M4: four wheels, plugboard",
+      "letters": 72,
+      "form": {
+        "time": "10:30",
+        "date": "1.5.45",
+        "groups": 22,
+        "indicator_groups": "VROL NMKA, repeated at the end of the message; the 18 groups between them are the ciphertext"
+      },
+      "transcription": {
+        "by": "Michael Hörenberg",
+        "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken",
+        "notes": [
+          "The copy here follows the published transcription. The photograph of the form was compared for layout and count, not letter by letter."
+        ]
+      },
+      "context": "Taken down on board the submarine U-534, which was sunk on 5 May 1945 and raised in 1993.",
+      "published_hints": [
+        {
+          "hint": "The form is marked 'M-Thetis', and the indicator points to the key net Thetis. The boat's radio operator tried the key net Potsdam first and got gibberish.",
+          "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (analysis by Dan Girard)"
+        },
+        {
+          "hint": "Deciphered with the day's bigram table, the indicator groups read EACH SEDM. At the end of the message the first group is written VAOL, and read that way they give KACH OEDM.",
+          "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (analysis by Dan Girard)"
+        },
+        {
+          "hint": "Every other message from U-534 that has been broken was enciphered on a standard M4. Other messages dated 1 May 1945 are in the key net Potsdam, and their settings are published on the same site.",
+          "source": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages"
+        },
+        {
+          "hint": "The Enigma@Home computing project is trying to decrypt this message.",
+          "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken"
+        }
+      ]
+    }
+  },
+  "full_solution": "For both messages: the Enigma settings (wheel order, ring settings, plugboard connections and start position; for the M4 also the fourth wheel and the reflector) and the complete German plaintext. For RXPSB, the places where letters are missing.",
+  "verification": {
+    "type": "re-run",
+    "how": "The submitted settings are entered into an Enigma simulator and must produce the submitted plaintext exactly. The answer counts once the plaintext is confirmed to be a German message. Only the standard machine counts: the Army Enigma with wheels I to V for RXPSB and the Navy M4 for the U-534 message. A machine with invented wiring does not count."
+  },
+  "notes": [
+    "On 2026-11-15 Frode Weierud's site listed RXPSB as unbroken and Michael Hörenberg's site listed P1030680 as unbroken.",
+    "Michael Hörenberg asks solvers to supply all settings so that a break can be checked independently."
+  ],
+  "sources": [
+    {
+      "what": "RXPSB: ciphertext and message form",
+      "url": "https://cryptocellar.org/bgac/g-army-messages.html"
+    },
+    {
+      "what": "RXPSB: list of still unbroken messages",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list-unbroken.html"
+    },
+    {
+      "what": "RXPSB: recovered keys, June to October 1941",
+      "url": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html"
+    },
+    {
+      "what": "U-534 message: ciphertext, message form and analysis",
+      "url": "https://enigma.hoerenberg.com/index.php?cat=Unbroken"
+    },
+    {
+      "what": "U-534: the other messages from the boat",
+      "url": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages"
+    }
+  ]
+}
