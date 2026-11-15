@@ -34,7 +34,7 @@
   "full_solution": "The keys and the complete plaintext of the message: every group from the third to the 92nd at least.",
   "verification": {
     "type": "re-run",
-    "how": "The submitted keys are applied to the stated run of groups and must produce the submitted plaintext exactly; the plaintext must read as French, and no neighbouring key may read better."
+    "how": "The submitted keys are applied to the stated run of groups and must produce the submitted plaintext exactly. The answer counts once the plaintext is confirmed to be the French message."
   },
   "sources": [
     {

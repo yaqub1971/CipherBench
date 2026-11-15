@@ -7,7 +7,6 @@ column's rank, e.g. the keyword ZEBRAS is the same key as [6, 3, 2, 4, 1, 5].
 """
 from __future__ import annotations
 
-import math
 from typing import Iterable, Sequence, Union
 
 Key = Union[str, Sequence[int]]
@@ -66,7 +65,3 @@ def decrypt_many(text: str, keys: Iterable[Key]) -> str:
         text = decrypt(text, key)
     return text
 
-
-def key_bits(keys: Iterable[Key]) -> float:
-    """Free choice in a set of column keys, in bits: log2(n!) for a key of n columns."""
-    return sum(math.lgamma(key_length(k) + 1) / math.log(2) for k in keys)

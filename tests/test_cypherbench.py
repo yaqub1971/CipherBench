@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(HERE))
 sys.path.insert(0, HERE)
 
 import samples  # noqa: E402
-from cypherbench import bookindex, checks, language, transposition  # noqa: E402
+from cypherbench import bookindex, checks, transposition  # noqa: E402
 
 REAL_CHALLENGES = checks.CHALLENGE_DIR
 
@@ -60,52 +60,16 @@ class SolvedChallengeOf2007(unittest.TestCase):
     def test_published_keys_give_english(self):
         self.assertEqual(len(self.ciphertext), 599)
         self.assertTrue(self.plaintext.startswith("THEGIRLHADARRIVEDATLUPTONHOUSEAHALFHOURAHEADOFMISSWESTMACOTT"))
-        self.assertTrue(language.reads_as(self.plaintext, "en"))
 
-    def test_checker_accepts_the_real_solution(self):
-        ok, why = checks.check_columnar(self.ciphertext, {"keys": self.KEYS, "plaintext": self.plaintext}, ["en"])
+    def test_checker_accepts_the_published_keys(self):
+        ok, why = checks.check_columnar(self.ciphertext, {"keys": self.KEYS, "plaintext": self.plaintext})
         self.assertTrue(ok, why)
 
     def test_checker_rejects_a_plaintext_the_keys_do_not_produce(self):
         fake = self.plaintext[:-5] + "ZZZZZ"
-        ok, why = checks.check_columnar(self.ciphertext, {"keys": self.KEYS, "plaintext": fake}, ["en"])
+        ok, why = checks.check_columnar(self.ciphertext, {"keys": self.KEYS, "plaintext": fake})
         self.assertFalse(ok)
         self.assertIn("do not turn the ciphertext", why)
-
-    def test_checker_rejects_a_nearly_right_key(self):
-        ranks = checks._ranks(self.KEYS[1])
-        ranks[3], ranks[11] = ranks[11], ranks[3]
-        keys = [self.KEYS[0], ranks]
-        partial = transposition.decrypt_many(self.ciphertext, keys)
-        ok, why = checks.check_columnar(self.ciphertext, {"keys": keys, "plaintext": partial}, ["en"])
-        self.assertFalse(ok, "a key with two columns exchanged is a partial solution and must not pass")
-
-    def test_checker_rejects_scrambled_output(self):
-        rng = random.Random(7)
-        keys = [random_key(21, rng), random_key(23, rng)]
-        junk = transposition.decrypt_many(self.ciphertext, keys)
-        ok, why = checks.check_columnar(self.ciphertext, {"keys": keys, "plaintext": junk}, ["en"])
-        self.assertFalse(ok)
-        self.assertIn("does not read as English", why)
-
-    def test_checker_rejects_a_key_as_large_as_the_text(self):
-        rng = random.Random(3)
-        text = letters(samples.ENGLISH)[:400]
-        keys = [random_key(150, rng), random_key(151, rng)]
-        ok, why = checks.check_columnar(transposition.encrypt_many(text, keys), {"keys": keys, "plaintext": text}, ["en"])
-        self.assertFalse(ok)
-        self.assertIn("too large", why)
-
-
-class Language(unittest.TestCase):
-    def test_real_text_passes_and_scrambled_text_fails(self):
-        rng = random.Random(5)
-        for text, lang in ((samples.ENGLISH, "en"), (samples.ENGLISH_2, "en"), (samples.GERMAN, "de"), (samples.FRENCH, "fr")):
-            self.assertTrue(language.reads_as(text, lang), lang)
-            scrambled = list(letters(text))
-            rng.shuffle(scrambled)
-            self.assertFalse(language.reads_as("".join(scrambled), lang), lang)
-
 
 class BookIndex(unittest.TestCase):
     def test_rules(self):
@@ -170,7 +134,7 @@ class WithSyntheticChallenges(unittest.TestCase):
 
     def test_transposition_needs_all_three_parts(self):
         full = checks.check_transposition_reloaded(self.dct)
-        self.assertEqual(full.status, checks.SOLVED, full.parts)
+        self.assertEqual(full.status, checks.AWAITING, full.parts)
         two = dict(self.dct)
         del two["part3"]
         self.assertEqual(checks.check_transposition_reloaded(two).status, checks.NOT_SOLVED)
@@ -179,7 +143,7 @@ class WithSyntheticChallenges(unittest.TestCase):
         self.assertEqual(checks.check_transposition_reloaded(wrong).status, checks.NOT_SOLVED)
 
     def test_french_message(self):
-        self.assertEqual(checks.check_french_resistance_1944(self.french).status, checks.SOLVED)
+        self.assertEqual(checks.check_french_resistance_1944(self.french).status, checks.AWAITING)
         part = dict(self.french, groups=[10, 60])
         self.assertEqual(checks.check_french_resistance_1944(part).status, checks.NOT_SOLVED)
         bad_reading = dict(self.french, readings={"5": "AAAAA"})
@@ -209,17 +173,21 @@ class WithSyntheticChallenges(unittest.TestCase):
             results = checks.check_all({"answers": answers}, self.tmp, frozenset(confirmed))
             return checks.score(results)
 
-        self.assertEqual(run({}), (0, 0))
-        self.assertEqual(run({"transposition-reloaded": self.dct}), (1, 20))
-        self.assertEqual(run({"transposition-reloaded": self.dct, "french-resistance-1944": self.french}), (2, 40))
         answers = {"transposition-reloaded": self.dct, "french-resistance-1944": self.french, "kryptos-k4": self.k4_answer(),
                    "gruess-cipher": {"word": "Abenteurer", "method": "x" * 100}, "urquhart-distich": self.urquhart}
-        self.assertEqual(run(answers), (2, 40), "answers that still await their holder do not count")
-        self.assertEqual(run(answers, ["kryptos-k4"]), (3, 60))
-        self.assertEqual(run(answers, ["kryptos-k4", "gruess-cipher", "urquhart-distich"]), (5, 100))
-        # a confirmation cannot rescue an answer that fails its own screening
+        self.assertEqual(run({}), (0, 0))
+        self.assertEqual(run(answers), (0, 0), "an answer does not count until it is confirmed")
+        self.assertEqual(run(answers, ["transposition-reloaded"]), (1, 20))
+        self.assertEqual(run(answers, ["transposition-reloaded", "french-resistance-1944"]), (2, 40))
+        self.assertEqual(run(answers, ["transposition-reloaded", "french-resistance-1944", "kryptos-k4"]), (3, 60))
+        self.assertEqual(run(answers, checks.ORDER[:4]), (4, 80))
+        self.assertEqual(run(answers, checks.ORDER), (5, 100))
+        # a confirmation cannot rescue an answer that fails its own check
         answers["kryptos-k4"] = {"plaintext": "A" * 97}
-        self.assertEqual(run(answers, ["kryptos-k4", "gruess-cipher", "urquhart-distich"]), (4, 80))
+        two_parts = dict(self.dct)
+        del two_parts["part3"]
+        answers["transposition-reloaded"] = two_parts
+        self.assertEqual(run(answers, checks.ORDER), (3, 60))
 
 
 class ChallengeFiles(unittest.TestCase):

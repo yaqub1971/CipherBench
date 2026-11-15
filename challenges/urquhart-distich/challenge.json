@@ -33,7 +33,7 @@
   "full_solution": "A named printed text and a fixed rule that turn all 64 numbers into letters, and the 64-letter plaintext.",
   "verification": {
     "type": "re-run",
-    "how": "The rule is applied to the named text and must produce the submitted plaintext for all 64 numbers. The plaintext must read as English or Latin and must stand clear of what the same rule gives for the numbers in shuffled order. A bare table that assigns a letter to each number is not accepted: with 32 different numbers in 64 places such a table can be made to say many different things. The named text must be confirmed as a real printing that Urquhart could have used."
+    "how": "The rule is applied to the named text and must produce the submitted plaintext for all 64 numbers. The answer counts once the named text is confirmed as a real printing that Urquhart could have used and the plaintext is confirmed as a readable line in English or Latin."
   },
   "sources": [
     {

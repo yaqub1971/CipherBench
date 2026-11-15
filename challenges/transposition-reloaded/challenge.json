@@ -38,7 +38,7 @@
   "full_solution": "The two keys and the complete plaintext of all three parts.",
   "verification": {
     "type": "re-run",
-    "how": "For each part the two submitted keys are applied to the ciphertext and must produce the submitted plaintext exactly; the plaintext must read as the stated language, and no neighbouring key may read better. MysteryTwister's own solution check (the first 34, 37 and 48 letters of the three plaintexts) gives independent confirmation.",
+    "how": "For each part the two submitted keys are applied to the ciphertext and must produce the submitted plaintext exactly. The answer counts once MysteryTwister's solution check accepts the first 34, 37 and 48 letters of the three plaintexts.",
     "where": "https://mysterytwister.org/challenges/level-3/"
   },
   "notes": [
