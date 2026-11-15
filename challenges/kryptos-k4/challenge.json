@@ -51,19 +51,28 @@
     "hints": [
       {
         "hint": "\"Two events had a significant role to play while I was writing the plain text of Kryptos in 1988. The first was my second trip to Egypt in late 1986, and the second was the fall of the Berlin Wall.\"",
-        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025",
+        "checked": "Read in the Popular Mechanics article itself; Scientific American reports the same hints."
       },
       {
         "hint": "\"The Berlin Clock in K4 is the World Clock in Berlin that was the gathering place for the crowds that brought down the Berlin wall.\"",
-        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025",
+        "checked": "Read in the Popular Mechanics article itself; Scientific American reports the same hints."
       },
       {
         "hint": "\"The codes of Kryptos from the morse code at the beginning through K5 are about delivering a message.\" K5 is a further passage that the artist has announced and not yet released.",
-        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025",
+        "checked": "Read in the Popular Mechanics article itself; Scientific American reports the same hints."
       },
       {
         "hint": "Writing about a future owner who might not keep K4 secret: \"If they don't, then (CLUE) what's the point?\"",
-        "given": "Open letter of 14 August 2025"
+        "given": "Open letter of 14 August 2025",
+        "checked": "Read in the letter itself."
+      },
+      {
+        "hint": "He has said that the first three passages contain clues to solving the fourth.",
+        "given": "Reported by Wired, 20 November 2014",
+        "checked": "Read in the Wired article itself."
       }
     ]
   },
@@ -105,6 +114,11 @@
     {
       "what": "Popular Mechanics, quoting the open letter of November 2025",
       "url": "https://www.popularmechanics.com/science/math/a69447312/kryptos-puzzle-clues/"
+    },
+    {
+      "what": "Wired on the hint that the first three passages hold clues",
+      "url": "https://www.wired.com/2014/11/second-kryptos-clue/"
     }
-  ]
+  ],
+  "known_plaintext_checked": "The owner's verifier page shows the same letters at positions 22-34 and 64-74."
 }
