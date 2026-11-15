@@ -1,0 +1,45 @@
+{
+  "id": "french-resistance-1944",
+  "order": 4,
+  "title": "French Resistance message, 1944",
+  "origin": "Handwritten message sheet found with a clandestine radio set of the type used by the British SOE; shown by Didier Clarençon at HistoCrypt 2026 and published by Klaus Schmeh on 12 July 2026",
+  "language": [
+    "fr"
+  ],
+  "size": "93 groups of five letters (465 letters)",
+  "ciphertext": [
+    "ciphertext.txt"
+  ],
+  "status": "unsolved",
+  "status_checked": "2026-11-15",
+  "observations": [
+    "The first and the last group are identical (JFGEU).",
+    "Written on the sheet below the groups: 455, a five-character group that is hard to read, the count 94, and the line 'mon 20 du 5.11.44 ... NR 53 - GR 94'.",
+    "The letter counts fit French better than the other languages tested, which points to a transposition cipher; a double transposition is the usual guess for this kind of traffic."
+  ],
+  "transcription": {
+    "made_from": "https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png",
+    "notes": [
+      "Read from the photograph of the sheet. It differs from the transcript printed with the photograph in one group: number 36 is CMENE on the sheet, not CMEME.",
+      "Group 76 is JNAAP: the writer corrected the first letter to J.",
+      "Group 38 is read as BAANO; its last letter could also be a Q."
+    ],
+    "alternative_readings": {
+      "38": [
+        "BAANO",
+        "BAANQ"
+      ]
+    }
+  },
+  "full_solution": "The keys and the complete plaintext of the message: every group from the third to the 92nd at least.",
+  "verification": {
+    "type": "re-run",
+    "how": "The submitted keys are applied to the stated run of groups and must produce the submitted plaintext exactly; the plaintext must read as French, and no neighbouring key may read better."
+  },
+  "sources": [
+    {
+      "what": "Photograph and description",
+      "url": "https://klausschmeh.net/an-encrypted-message-from-the-french-resistance-can-you-decipher-it/"
+    }
+  ]
+}
