@@ -128,26 +128,26 @@ LNTSNRNERNCPSDBOUEEEEISMINHEHHFEHMICIINAHOFONM
 - **Already tried without success:** Lasry reported in 2018 that his hill-climbing method could not produce a solution for these challenges, and that for part 1 he had tested tens of billions of phrases from Wikipedia and Project Gutenberg as the second key.
 - **Full solution:** both keys and the complete plaintext of all three parts. One or two parts do not count.
 
-### 3. Grüß's mental-arithmetic cipher
+### 3. Enigma message from U-534, 1945
 
-The mental calculator Wenzel Grüß designed a cipher that can be worked entirely in the head, both ways. He used it to turn one German word of exactly ten letters into 31 digits, published in October 2026.
+A German Navy radio message of 1 May 1945, taken down on board the submarine U-534 and enciphered on the Enigma machine. It is known by the number P1030680 and has resisted every attempt so far.
 
 ```
-3150105362170496
-804276904486349
+JCRS AJTG SJEY EXYK KZZS HVUO
+CTRF RCRP FVYP LKPP LGRH VVBB
+TBRS XSWX GGTY TVKQ NGSC HVGF
 ```
 
-- **Hints from the author:** he gave these after publication. They are taken from the comments under [the challenge post](https://klausschmeh.net/can-you-solve-this-puzzle-from-a-world-class-mental-calculator-and-win-100-euros/) as they stood on 15 November 2026. Some are replies he gave on Facebook, which a reader quoted there.
-  - The two lines form a single 31-digit number. It is printed in two lines only to make it easier to read.
-  - No special knowledge is required. He said this in reply to a reader who thought the perfect number 496 was involved.
-  - No mathematical acrobatics are needed. An ambitious seventh-grade pupil who has practised the method should be able to encipher and decipher with it.
-  - He gave one roundabout hint: "Pickende Hühner", which is German for "pecking chickens". Asked whether this hint refers to the method and not to the solution word, he answered: the solution word.
-  - Asked whether the letters are first turned into their positions in the alphabet (A = 1 to Z = 26), he answered: no.
-  - Asked whether the number is built piece by piece, a few digits for each letter, and not by one large calculation, he answered: piece by piece.
-  - Asked whether the enciphering of a letter depends on earlier letters or digits, he answered: no.
-  - Asked whether the first digit, 3, belongs to the enciphered content, he answered: no.
-- **Fixed in advance:** the author published a SHA-256 hash of his solution statement: `24b23351ddf2b11651dd971b7b42e23d41fb1feebe9e9baf1cdc2692b67c3478`
-- **Full solution:** the word and the method that turns the 31 digits into it. A word that is guessed, or matched against the hash without the method, does not count.
+- **Machine:** the German Navy Enigma M4, with four wheels and a plugboard. Every other message from U-534 that has been broken was enciphered on a standard M4.
+- **On the message form:** time 10:30, date 1.5.45, and 22 groups of four letters. The first two groups, VROL NMKA, are the indicator. They are repeated at the end. The 18 groups between them are the ones shown above.
+- **Transcription:** by Michael Hörenberg, from the [message form](https://enigma.hoerenberg.com/index.php?cat=Unbroken) found on the boat.
+- **Hints, each checked for this benchmark:**
+  - The form is marked "M-Thetis": the message belongs to the key net Thetis, which U-534 presumably did not hold. According to the analysis of the form published by Michael Hörenberg, the boat's radio operator tried the key net Potsdam, with the start positions ELKC and then PUYY, and got gibberish.
+  - The Potsdam key of 1 May 1945, published with the other messages from the boat: reflector B, fourth wheel Gamma, wheels IV III VIII, ring settings VCCH, plugs CH EJ NV OU TY LG SZ PK DI QB. With the start position PUYY it turns the first six letters of this message into IPZAYK, as the analysis says.
+  - A second key published with the boat's messages, the one that reads Dönitz's message announcing his appointment as Hitler's successor: reflector C, fourth wheel Beta, wheels V VI VIII, ring settings EPEL, plugs AE BF CM DQ HU JN LX PR SZ VW.
+  - Neither of these two keys reads this message at any of the 456,976 start positions.
+- **Full solution:** the Enigma settings and the complete German plaintext. The settings are the wheel order including the fourth wheel, the reflector, the ring settings, the plugboard connections and the start position.
+- **Standard machine only:** a solution must work on the standard M4. A machine with invented wiring does not count.
 
 ### 4. French Resistance message, 1944
 
@@ -209,23 +209,23 @@ MXXYM UNU-T ED
 - **Full solution:** the Enigma settings and the complete German plaintext. The settings are the wheel order, the ring settings, the plugboard connections and the start position. Say where the missing letters fall.
 - **Standard machine only:** a solution must work on the standard Army Enigma described above. A machine with invented wiring does not count.
 
-### 6. Enigma message from U-534, 1945
+### 6. Grüß's mental-arithmetic cipher
 
-A German Navy radio message of 1 May 1945, taken down on board the submarine U-534 and enciphered on the Enigma machine. It is known by the number P1030680 and has resisted every attempt so far.
+The mental calculator Wenzel Grüß designed a cipher that can be worked entirely in the head, both ways. He used it to turn one German word of exactly ten letters into 31 digits, published in October 2026.
 
 ```
-JCRS AJTG SJEY EXYK KZZS HVUO
-CTRF RCRP FVYP LKPP LGRH VVBB
-TBRS XSWX GGTY TVKQ NGSC HVGF
+3150105362170496
+804276904486349
 ```
 
-- **Machine:** the German Navy Enigma M4, with four wheels and a plugboard. Every other message from U-534 that has been broken was enciphered on a standard M4.
-- **On the message form:** time 10:30, date 1.5.45, and 22 groups of four letters. The first two groups, VROL NMKA, are the indicator. They are repeated at the end. The 18 groups between them are the ones shown above.
-- **Transcription:** by Michael Hörenberg, from the [message form](https://enigma.hoerenberg.com/index.php?cat=Unbroken) found on the boat.
-- **Hints, each checked for this benchmark:**
-  - The form is marked "M-Thetis": the message belongs to the key net Thetis, which U-534 presumably did not hold. According to the analysis of the form published by Michael Hörenberg, the boat's radio operator tried the key net Potsdam, with the start positions ELKC and then PUYY, and got gibberish.
-  - The Potsdam key of 1 May 1945, published with the other messages from the boat: reflector B, fourth wheel Gamma, wheels IV III VIII, ring settings VCCH, plugs CH EJ NV OU TY LG SZ PK DI QB. With the start position PUYY it turns the first six letters of this message into IPZAYK, as the analysis says.
-  - A second key published with the boat's messages, the one that reads Dönitz's message announcing his appointment as Hitler's successor: reflector C, fourth wheel Beta, wheels V VI VIII, ring settings EPEL, plugs AE BF CM DQ HU JN LX PR SZ VW.
-  - Neither of these two keys reads this message at any of the 456,976 start positions.
-- **Full solution:** the Enigma settings and the complete German plaintext. The settings are the wheel order including the fourth wheel, the reflector, the ring settings, the plugboard connections and the start position.
-- **Standard machine only:** a solution must work on the standard M4. A machine with invented wiring does not count.
+- **Hints from the author:** he gave these after publication. They are taken from the comments under [the challenge post](https://klausschmeh.net/can-you-solve-this-puzzle-from-a-world-class-mental-calculator-and-win-100-euros/) as they stood on 15 November 2026. Some are replies he gave on Facebook, which a reader quoted there.
+  - The two lines form a single 31-digit number. It is printed in two lines only to make it easier to read.
+  - No special knowledge is required. He said this in reply to a reader who thought the perfect number 496 was involved.
+  - No mathematical acrobatics are needed. An ambitious seventh-grade pupil who has practised the method should be able to encipher and decipher with it.
+  - He gave one roundabout hint: "Pickende Hühner", which is German for "pecking chickens". Asked whether this hint refers to the method and not to the solution word, he answered: the solution word.
+  - Asked whether the letters are first turned into their positions in the alphabet (A = 1 to Z = 26), he answered: no.
+  - Asked whether the number is built piece by piece, a few digits for each letter, and not by one large calculation, he answered: piece by piece.
+  - Asked whether the enciphering of a letter depends on earlier letters or digits, he answered: no.
+  - Asked whether the first digit, 3, belongs to the enciphered content, he answered: no.
+- **Fixed in advance:** the author published a SHA-256 hash of his solution statement: `24b23351ddf2b11651dd971b7b42e23d41fb1feebe9e9baf1cdc2692b67c3478`
+- **Full solution:** the word and the method that turns the 31 digits into it. A word that is guessed, or matched against the hash without the method, does not count.
