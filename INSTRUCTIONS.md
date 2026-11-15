@@ -128,6 +128,15 @@ The mental calculator Wenzel Grüß designed a cipher that can be worked entirel
 804276904486349
 ```
 
+- **Hints from the author:** he gave these after publication. They are taken from the comments under [the challenge post](https://klausschmeh.net/can-you-solve-this-puzzle-from-a-world-class-mental-calculator-and-win-100-euros/) as they stood on 15 November 2026. Some are replies he gave on Facebook, which a reader quoted there.
+  - The two lines form a single 31-digit number. It is printed in two lines only to make it easier to read.
+  - No special knowledge is required. He said this in reply to a reader who thought the perfect number 496 was involved.
+  - No mathematical acrobatics are needed. An ambitious seventh-grade pupil who has practised the method should be able to encipher and decipher with it.
+  - He gave one roundabout hint: "Pickende Hühner", which is German for "pecking chickens". Asked whether this hint refers to the method and not to the solution word, he answered: the solution word.
+  - Asked whether the letters are first turned into their positions in the alphabet (A = 1 to Z = 26), he answered: no.
+  - Asked whether the number is built piece by piece, a few digits for each letter, and not by one large calculation, he answered: piece by piece.
+  - Asked whether the enciphering of a letter depends on earlier letters or digits, he answered: no.
+  - Asked whether the first digit, 3, belongs to the enciphered content, he answered: no.
 - **Fixed in advance:** the author published a SHA-256 hash of his solution statement: `24b23351ddf2b11651dd971b7b42e23d41fb1feebe9e9baf1cdc2692b67c3478`
 - **Full solution:** the word and the method that turns the 31 digits into it. A word that is guessed, or matched against the hash without the method, does not count.
 

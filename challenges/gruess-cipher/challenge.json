@@ -28,6 +28,48 @@
     "The author offers 100 euros to the first person who sends the word and a comprehensible description of how it was found.",
     "A word that is only guessed or matched against the hash, without the method, is not a solution."
   ],
+  "author_hints": {
+    "collected": "2026-11-15",
+    "where": "Comments under the challenge post. Some are replies the author gave on Facebook, which a reader quoted there.",
+    "hints": [
+      {
+        "hint": "The two lines form a single 31-digit number. It is printed in two lines only to make it easier to read.",
+        "given": "Author's reply on Facebook, quoted by a reader in a comment of 28 October 2026"
+      },
+      {
+        "hint": "No special knowledge is required. The author said this in reply to a reader who thought the perfect number 496 was involved.",
+        "given": "Author's reply on Facebook, quoted by a reader in a comment of 28 October 2026"
+      },
+      {
+        "hint": "No mathematical acrobatics are needed. An ambitious seventh-grade pupil who has practised the method should be able to encipher and decipher with it.",
+        "given": "Author's comments of 31 October and 5 November 2026"
+      },
+      {
+        "hint": "A roundabout hint: 'Pickende Hühner' (German for 'pecking chickens').",
+        "given": "Author's hint on Facebook, quoted by a reader in a comment of 28 October 2026"
+      },
+      {
+        "hint": "Asked whether the hint 'Pickende Hühner' refers to the method and not to the solution word, the author answered: the solution word.",
+        "given": "Author's comment of 5 November 2026"
+      },
+      {
+        "hint": "Asked whether the letters are first turned into their positions in the alphabet (A = 1 to Z = 26), the author answered: no.",
+        "given": "Author's comment of 5 November 2026"
+      },
+      {
+        "hint": "Asked whether the number is built piece by piece, a few digits for each letter, and not by one large calculation, the author answered: piece by piece.",
+        "given": "Author's comment of 5 November 2026"
+      },
+      {
+        "hint": "Asked whether the enciphering of a letter depends on earlier letters or digits, the author answered: no.",
+        "given": "Author's comment of 5 November 2026"
+      },
+      {
+        "hint": "Asked whether the first digit, 3, belongs to the enciphered content, the author answered: no.",
+        "given": "Author's comment of 5 November 2026"
+      }
+    ]
+  },
   "sources": [
     {
       "what": "Challenge post",
