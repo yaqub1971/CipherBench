@@ -18,24 +18,21 @@
     "The letter counts fit French better than the other languages tested, which points to a transposition cipher; a double transposition is the usual guess for this kind of traffic."
   ],
   "published_readings": {
-    "by": "Klaus Schmeh, who published the sheet on 12 July 2026",
-    "note": "These are his interpretations, not confirmed facts.",
     "source": "https://klausschmeh.net/an-encrypted-message-from-the-french-resistance-can-you-decipher-it/",
-    "readings": [
-      "The first and last groups (JFGEU) are almost certainly indicator groups, repeated, which were used to derive the key.",
-      "The second group (QTIIO) appears to be a special prefix and not part of the message. According to notes that came with the sheet, it was itself enciphered with a Playfair cipher and told headquarters which coding procedure the operator used.",
-      "The number 455 is the length of the message as transmitted, not counting the indicator groups. Without the prefix, 450 letters of ciphertext remain.",
-      "If the cipher is a double transposition, the two keywords were probably between 15 and 35 letters long. The message may contain a few null letters at the beginning or the end.",
-      "Operators often put the date of writing into the message. The plaintext may therefore contain 'mon vingt du cinq onze quarante quatre', somewhere in the middle."
-    ],
-    "reader_remark": {
-      "remark": "Paolo Bonavoglia calls the message clearly a double transposition, very similar to the cipher of Antonio Marzi, an Italian partisan who also worked for the British secret service. Marzi's messages were solved by Armin Krauss, with the help of notes on the key that Marzi wrote down in 2007. Leo Marks's book 'Between Silk and Cyanide' describes these systems.",
-      "passed_on_by": "Klaus Schmeh, in a comment of 15 July 2026 under his post",
-      "links": [
-        "http://www1.crittologia.eu/storia/critMarzi.html",
-        "http://www1.crittologia.eu/critto/php/critMarzi.phtml"
-      ]
-    }
+    "items": [
+      {
+        "statement": "The sheet gives 455 as the length. That is the 465 letters without the first and the last group, so those two groups (JFGEU) were not counted as part of the message. Klaus Schmeh reads them as indicator groups that told the receiver which key was used.",
+        "status": "The count was checked against the transcription. The reading as indicator groups is the publisher's."
+      },
+      {
+        "statement": "According to notes that came with the sheet, the second group (QTIIO) is a separate prefix and not part of the message. If that is right, the message text has 450 letters. If not, it has 455.",
+        "status": "Not confirmed."
+      },
+      {
+        "statement": "If the cipher is a double transposition, the two keywords were probably between 15 and 35 letters long.",
+        "status": "The publisher's estimate."
+      }
+    ]
   },
   "transcription": {
     "made_from": "https://klausschmeh.net/wp-content/uploads/2026/07/Resistance-700.png",

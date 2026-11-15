@@ -57,19 +57,23 @@
   "published_facts": [
     {
       "fact": "The three challenges were built with the weaknesses in mind that had been used to solve the first challenge of this kind, set in 2007 and solved in 2013.",
-      "source": "The challenge descriptions on MysteryTwister"
+      "source": "The challenge descriptions on MysteryTwister",
+      "checked": "Read in the three descriptions."
     },
     {
       "fact": "Part 3: the plaintext was written by the authors themselves and not taken from any published source.",
-      "source": "https://scienceblogs.de/klausis-krypto-kolumne/2018/01/25/the-top-50-unsolved-encrypted-messages-13-double-column-transposition-reloaded/ (Klaus Schmeh, 2018)"
+      "source": "https://scienceblogs.de/klausis-krypto-kolumne/2018/01/25/the-top-50-unsolved-encrypted-messages-13-double-column-transposition-reloaded/ (Klaus Schmeh, co-author, 2018)",
+      "checked": "Read in the post."
     },
     {
-      "fact": "The first challenge was solved by George Lasry with a hill-climbing attack on the ciphertext alone and a dictionary attack on keys made from phrases. Its plaintext could also be found by searching published texts for one with the same letters.",
-      "source": "Lasry, Kopal and Wacker, Solving the Double Transposition Challenge with a Divide-and-Conquer Approach, Cryptologia 38(3), 2014; https://scienceblogs.de/klausis-krypto-kolumne/2018/01/25/the-top-50-unsolved-encrypted-messages-13-double-column-transposition-reloaded/"
+      "fact": "The first challenge was solved by George Lasry with a hill-climbing attack on the ciphertext alone and a dictionary attack on keys made from phrases.",
+      "source": "Lasry, Kopal and Wacker, Solving the Double Transposition Challenge with a Divide-and-Conquer Approach, Cryptologia 38(3), 2014",
+      "checked": "Abstract and the post by Klaus Schmeh; the paper itself was not read."
     },
     {
-      "fact": "George Lasry reported in 2018 that his hill-climbing method could not produce a solution for keys as long as these. For part 1 he tested tens of billions of phrases from Wikipedia and Project Gutenberg as the second key and did not find it. He judged parts 2 and 3 out of reach and part 1 possibly solvable.",
-      "source": "https://scienceblogs.de/klausis-krypto-kolumne/2018/01/25/the-top-50-unsolved-encrypted-messages-13-double-column-transposition-reloaded/ (comment by George Lasry)"
+      "fact": "George Lasry reported in 2018 that his hill-climbing method could not produce a solution for these challenges, and that for part 1 he had tested tens of billions of phrases from Wikipedia and Project Gutenberg as the second key.",
+      "source": "https://scienceblogs.de/klausis-krypto-kolumne/2018/01/25/the-top-50-unsolved-encrypted-messages-13-double-column-transposition-reloaded/ (comment by George Lasry)",
+      "checked": "Read in the comment."
     }
   ]
 }

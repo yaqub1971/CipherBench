@@ -51,41 +51,28 @@
     "hints": [
       {
         "hint": "\"Two events had a significant role to play while I was writing the plain text of Kryptos in 1988. The first was my second trip to Egypt in late 1986, and the second was the fall of the Berlin Wall.\"",
-        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025",
+        "checked": "Read in the Popular Mechanics article itself; Scientific American reports the same hints."
       },
       {
         "hint": "\"The Berlin Clock in K4 is the World Clock in Berlin that was the gathering place for the crowds that brought down the Berlin wall.\"",
-        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025",
+        "checked": "Read in the Popular Mechanics article itself; Scientific American reports the same hints."
       },
       {
         "hint": "\"The codes of Kryptos from the morse code at the beginning through K5 are about delivering a message.\" K5 is a further passage that the artist has announced and not yet released.",
-        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025"
+        "given": "Open letter of November 2025, as quoted by Popular Mechanics on 19 November 2025",
+        "checked": "Read in the Popular Mechanics article itself; Scientific American reports the same hints."
       },
       {
         "hint": "Writing about a future owner who might not keep K4 secret: \"If they don't, then (CLUE) what's the point?\"",
-        "given": "Open letter of 14 August 2025"
-      }
-    ],
-    "other_remarks": [
-      {
-        "remark": "In 2006 the artist said that the answers to the first three passages contain clues to the fourth.",
-        "source": "https://en.wikipedia.org/wiki/Kryptos"
+        "given": "Open letter of 14 August 2025",
+        "checked": "Read in the letter itself."
       },
       {
-        "remark": "In 2014, when he gave the word CLOCK, he said: \"You'd better delve into that particular clock.\"",
-        "source": "https://en.wikipedia.org/wiki/Kryptos"
-      },
-      {
-        "remark": "In November 2025 he said that K5 has 97 characters like K4, uses a similar system, and shares some words with K4 in the same positions, BERLINCLOCK among them.",
-        "source": "https://www.scientificamerican.com/article/cia-kryptos-puzzle-creator-releases-final-clues/ and Popular Mechanics, 19 November 2025"
-      },
-      {
-        "remark": "Asked in November 2025 about the mathematics of the solution, he answered: \"Who says it is even a math solution?\" He advised solvers to be creative.",
-        "source": "https://www.scientificamerican.com/article/cia-kryptos-puzzle-creator-releases-final-clues/"
-      },
-      {
-        "remark": "Edward Scheidt, who designed the cipher systems of the sculpture, has spoken of an intentional \"change in the methodology\".",
-        "source": "https://en.wikipedia.org/wiki/Kryptos"
+        "hint": "He has said that the first three passages contain clues to solving the fourth.",
+        "given": "Reported by Wired, 20 November 2014",
+        "checked": "Read in the Wired article itself."
       }
     ]
   },
@@ -129,8 +116,9 @@
       "url": "https://www.popularmechanics.com/science/math/a69447312/kryptos-puzzle-clues/"
     },
     {
-      "what": "Wikipedia on Kryptos, for the earlier remarks",
-      "url": "https://en.wikipedia.org/wiki/Kryptos"
+      "what": "Wired on the hint that the first three passages hold clues",
+      "url": "https://www.wired.com/2014/11/second-kryptos-clue/"
     }
-  ]
+  ],
+  "known_plaintext_checked": "The owner's verifier page shows the same letters at positions 22-34 and 64-74."
 }

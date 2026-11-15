@@ -29,32 +29,24 @@
   "context": "Taken down on board the submarine U-534, which was sunk on 5 May 1945 and raised in 1993.",
   "published_hints": [
     {
-      "hint": "The form is marked 'M-Thetis', and the indicator points to the key net Thetis. The boat's radio operator tried the key net Potsdam first and got gibberish.",
-      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (analysis by Dan Girard)"
+      "hint": "The form is marked 'M-Thetis': the message belongs to the key net Thetis, which U-534 presumably did not hold. The boat's radio operator tried the key net Potsdam, with the start positions ELKC and then PUYY, and got gibberish.",
+      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (the form and its analysis by Dan Girard)",
+      "checked": "The marking is visible on the photograph of the form."
     },
     {
-      "hint": "Deciphered with the day's bigram table, the indicator groups read EACH SEDM. At the end of the message the first group is written VAOL, and read that way they give KACH OEDM.",
-      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (analysis by Dan Girard)"
+      "hint": "The Potsdam key of 1 May 1945: reflector B, fourth wheel Gamma, wheels IV III VIII, ring settings VCCH, plugs CH EJ NV OU TY LG SZ PK DI QB. With the start position PUYY it turns the first six letters of this message into IPZAYK.",
+      "source": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages",
+      "checked": "Run for this benchmark on 2026-11-15: the result IPZAYK matches the published analysis."
     },
     {
-      "hint": "Every other message from U-534 that has been broken was enciphered on a standard M4. Other messages dated 1 May 1945 are in the key net Potsdam, and their settings are published on the same site.",
-      "source": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages"
+      "hint": "A second key published with the boat's messages, the one that reads Dönitz's message announcing his appointment as Hitler's successor: reflector C, fourth wheel Beta, wheels V VI VIII, ring settings EPEL, plugs AE BF CM DQ HU JN LX PR SZ VW.",
+      "source": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030681",
+      "checked": "Run for this benchmark on 2026-11-15: the key reads that message."
     },
     {
-      "hint": "The Enigma@Home computing project is trying to decrypt this message.",
-      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken"
-    },
-    {
-      "hint": "The Potsdam key of 1 May 1945: reflector B, fourth wheel Gamma, wheels IV III VIII, ring settings VCCH, plugs CH EJ NV OU TY LG SZ PK DI QB. With this key and the start position PUYY, the first six letters of the message come out as IPZAYK, the gibberish the operator got.",
-      "source": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages (messages P1030682 and P1030690, and the analysis by Dan Girard). Reproduced for this benchmark on 2026-11-15 with an M4 simulator."
-    },
-    {
-      "hint": "A second key from the boat's messages, used for Dönitz's message announcing his appointment as Hitler's successor: reflector C, fourth wheel Beta, wheels V VI VIII, ring settings EPEL, plugs AE BF CM DQ HU JN LX PR SZ VW.",
-      "source": "https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030681. Checked for this benchmark on 2026-11-15: the key reads that message."
-    },
-    {
-      "hint": "In the key book the indicator groups give the numbers 14 and 9, or 14 and 5 for the other reading. These numbers pointed to the basic setting in a table that has not survived.",
-      "source": "https://enigma.hoerenberg.com/index.php?cat=Unbroken (analysis by Dan Girard)"
+      "hint": "Neither of these two keys reads this message at any of the 456,976 start positions.",
+      "source": "Test made for this benchmark",
+      "checked": "Run on 2026-11-15."
     }
   ],
   "full_solution": "The Enigma settings (wheel order including the fourth wheel, reflector, ring settings, plugboard connections and start position) and the complete German plaintext.",

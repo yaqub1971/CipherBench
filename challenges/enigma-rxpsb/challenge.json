@@ -31,39 +31,27 @@
       "The copy here follows the published transcription. The facsimile was compared for layout and count, not letter by letter."
     ]
   },
-  "context": "Radio traffic of German Army Group North during the invasion of the Soviet Union (Operation Barbarossa). The message was received by the radio station of the quartermaster (Ib) of the SS-Totenkopf Division. The collection holds close to 1,000 Enigma and hand-cipher messages, nearly all now broken.",
+  "context": "Radio traffic of German Army Group North during the invasion of the Soviet Union (Operation Barbarossa). The message was received by the radio station of the quartermaster (Ib) of the SS-Totenkopf Division.",
   "published_hints": [
     {
-      "hint": "The key of the day before, 27 June 1941, is known: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. Message Nr. 51 on the same radio link, received on 28 June at 09:07, was still enciphered with it.",
-      "source": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html"
+      "hint": "The key of the day before, 27 June 1941: reflector B, wheels III V II, ring settings RGP, plugs AV BG CH EN FU KO MS PX RY TW. It reads the three messages of 27 June in this collection (Nr. 45, 48 and 51). It does not read RXPSB at any of the 17,576 start positions.",
+      "source": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html",
+      "checked": "Run for this benchmark on 2026-11-15: the key gives the published start positions and German text for the three messages, and only gibberish for RXPSB at every start position."
     },
     {
-      "hint": "The key of 27 June 1941 does not open RXPSB as transcribed.",
-      "source": "Checked for this benchmark on 2026-11-15 with an Enigma simulator that reproduces the published start position of message Nr. 45."
+      "hint": "The three messages of 27 June have no spaces and use X as a separator. CH is written Q. Place names are sent twice. They mention THEODOR DIV (the T Division, that is the SS-Totenkopf Division), PANZGRU VIER (Panzer Group 4), BETRIEBSSTOFF, KOLONNEN and the town ROSSIENIE. Nr. 51, sent on the same radio link as RXPSB the day before, begins MELDUNG UEBER.",
+      "source": "The three messages on https://cryptocellar.org/bgac/g-army-messages.html, read with the published key; the writing rules are also stated on https://cryptocellar.org/bgac/the-fmngi-break.html",
+      "checked": "Read for this benchmark on 2026-11-15. The decrypts contain wrong letters, so the words are given as they are meant, not as they stand letter by letter."
     },
     {
-      "hint": "The project names the likely reasons why messages like this one did not break: unfavourable plaintext, problematic plugboard connections and short length.",
-      "source": "https://cryptocellar.org/bgac/g-army-messages.html"
+      "hint": "Those messages contain many wrong letters from reception. Two messages of this collection broken in September 2026 had 9 wrong letters in 49 and 11 in 69.",
+      "source": "https://cryptocellar.org/bgac/the-awtzk-znlzt-breaks.html",
+      "checked": "Read on the keeper's page; the wrong letters in the three messages of 27 June were seen in the decrypts."
     },
     {
-      "hint": "Message MVUEH of 10 July 1941, from the same collection, was broken in September 2026. Its transcription had contained several errors, the left-hand wheel turned over inside the message, and its key was completely different from the key of the other messages of that day.",
-      "source": "https://cryptocellar.org/bgac/the-mvueh-break.html"
-    },
-    {
-      "hint": "Plaintexts in this collection have no spaces and use X as a separator. Ä and Ü are written AE and UE, and CH and CK are replaced by Q. Names are often sent twice. One broken message ends X HARTJENSTEIN X HARTJENSTEIN X.",
-      "source": "https://cryptocellar.org/bgac/the-fmngi-break.html"
-    },
-    {
-      "hint": "Signatures have served as cribs. Messages to the same station from the division's supply service end with forms such as XGEZXHARTJENSTEINX. RXPSB came from a different sender, an army corps.",
-      "source": "https://cryptocellar.org/bgac/the-fmngi-break.html"
-    },
-    {
-      "hint": "Incoming messages in this collection often contain wrong letters, from poor radio conditions and from handwriting that is hard to read. Two messages broken in September 2026 had 9 wrong letters in 49 and 11 in 69, and hill-climbing searches had failed to converge on them.",
-      "source": "https://cryptocellar.org/bgac/the-awtzk-znlzt-breaks.html"
-    },
-    {
-      "hint": "Solvers have looked for cribs in the plaintexts of hand-cipher messages of the same day, which the project shared on request.",
-      "source": "https://cryptocellar.org/bgac/the-awtzk-znlzt-breaks.html"
+      "hint": "Message MVUEH of 10 July 1941, broken in September 2026, had a key completely different from the other messages of its day, and its left-hand wheel turned over inside the message.",
+      "source": "https://cryptocellar.org/bgac/the-mvueh-break.html",
+      "checked": "Read on the keeper's page."
     }
   ],
   "full_solution": "The Enigma settings (wheel order, ring settings, plugboard connections and start position), the complete German plaintext, and the places where letters are missing.",
